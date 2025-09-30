@@ -1,0 +1,516 @@
+ [  
+  {
+    "id": "1",
+    "name": "Áo Sơ Mi Versace Luxury Premium",
+    "price": 3540000,
+    "image": "image/quanao/ao.avif",
+    "category": "ao",
+    "description": "Chiếc áo sơ mi Versace được thiết kế tinh tế với chất liệu cotton mềm mại, phù hợp cho những buổi gặp gỡ sang trọng, mang lại phong cách lịch lãm và đẳng cấp vượt trội.",
+    "gender": "nam"
+  },
+  {
+    "id": "2",
+    "name": "Áo Sơ Mi Versace Elegant Edition",
+    "price":1590000,
+    "image": "image/quanao/v1.avif",
+    "category": "ao",
+    "description": "Mẫu áo sơ mi Versace cao cấp, phong cách hiện đại, dễ dàng phối đồ. Thiết kế tinh xảo cùng chất liệu bền bỉ giúp người mặc luôn nổi bật trong mọi tình huống và hoàn cảnh.",
+    "gender": "nam"
+  },
+  {
+    "id": "3",
+    "name": "Áo Sơ Mi Versace Tay Ngắn Urban Style",
+    "price": 1680000,
+    "image": "image/quanao/aonam1.avif",
+    "category": "ao",
+    "description": "Áo sơ mi tay ngắn Versace mang phong cách trẻ trung, nổi bật với đường may tỉ mỉ. Vải cao cấp mềm mại, thoáng mát, tạo cảm giác thoải mái và sự tự tin trong từng hoạt động.",
+    "gender": "nam"
+  },
+  {
+    "id": "4",
+    "name": "Áo Sơ Mi Versace Classic Fit",
+    "price": 3560000,
+    "image": "image/quanao/aonam2.avif",
+    "category": "ao",
+    "description": "Áo sơ mi Versace với kiểu dáng cổ điển nhưng vẫn hiện đại. Thiết kế chuẩn form, tôn dáng người mặc. Chất liệu cotton cao cấp đảm bảo sự thoải mái, thoáng khí và sang trọng.",
+    "gender": "nam"
+  },
+  {
+    "id": "5",
+    "name": "Áo Polo LV Classic Premium",
+    "price": 299000,
+    "image": "image/quanao/aothun3.avif",
+    "category": "ao",
+    "description": "Chiếc áo Polo LV Classic mang đến sự trẻ trung và năng động. Thiết kế đơn giản mà tinh tế, chất vải thoáng mát giúp người mặc cảm nhận sự thoải mái trong mọi hoạt động thường ngày.",
+    "gender": "nam"
+  },
+  {
+    "id": "6",
+    "name": "Áo Thể Thao Classic Activewear",
+    "price": 999999,
+    "image": "image/quanao/aothun4.avif",
+    "category": "ao",
+    "description": "Áo thể thao Classic mang phong cách khỏe khoắn, được thiết kế cho sự vận động linh hoạt. Chất liệu thấm hút mồ hôi tốt, nhẹ nhàng, phù hợp cho các hoạt động thể chất lẫn phong cách đường phố.",
+    "gender": "nam"
+  },
+  {
+    "id": "7",
+    "name": "Áo Thun LV Cao Cấp Modern Fit",
+    "price": 1200000,
+    "image": "image/quanao/aothun5.avif",
+    "category": "ao",
+    "description": "Áo thun LV hiện đại, mang phong cách tối giản nhưng đầy tinh tế. Chất liệu mềm mịn, co giãn tốt, dễ kết hợp với nhiều trang phục khác, thích hợp cho phong cách thường ngày sang trọng.",
+    "gender": "nam"
+  },
+  {
+    "id": "8",
+    "name": "Quần Thể Thao Classic Comfort",
+    "price": 1200000,
+    "image": "image/quanao/v4.avif",
+    "category": "ao",
+    "description": "Quần thể thao Classic thiết kế đơn giản, phù hợp cả luyện tập và đi chơi. Vải nhẹ, thoáng mát, dễ dàng di chuyển. Mang lại sự tiện lợi và phong cách thời thượng trong mọi tình huống.",
+    "gender": "nam"
+  },
+  {
+    "id": "9",
+    "name": "Quần Thể Thao Classic Sporty",
+    "price": 3590000,
+    "image": "image/quanao/q1.avif",
+    "category": "ao",
+    "description": "Mẫu quần thể thao Sporty mang phong cách năng động, hiện đại. Chất liệu co giãn và thoáng khí, thích hợp cho luyện tập thể thao hoặc đi dạo phố, đảm bảo sự thoải mái và sành điệu.",
+    "gender": "nam"
+  },
+  {
+    "id": "10",
+    "name": "Quần Thể Thao Classic Dynamic",
+    "price": 3430000,
+    "image": "image/quanao/q2.avif",
+    "category": "ao",
+    "description": "Quần thể thao Classic Dynamic với kiểu dáng trẻ trung, dễ phối hợp với nhiều loại áo. Chất vải bền chắc, thấm hút nhanh, mang đến trải nghiệm vận động thoải mái và phong cách thời trang hiện đại.",
+    "gender": "nam"
+  },
+  
+
+
+
+
+  {
+    "id": "11",
+    "name": "Áo Hoodie Nữ Streetwear Premium",
+    "price": 2499000,
+    "image": "image/quanao/aonu1.avif",
+    "category": "ao",
+    "description": "Áo hoodie nữ phong cách đường phố, chất liệu cotton dày ấm áp. Kiểu dáng rộng rãi, dễ phối với quần jeans hay legging, phù hợp cho mùa lạnh và mang đến vẻ ngoài cá tính.",
+    "gender": "nu"
+  },
+  {
+    "id": "12",
+    "name": "Áo Thun Nữ Casual Modern",
+    "price": 1899000,
+    "image": "image/quanao/aonu2.avif",
+    "category": "ao",
+    "description": "Áo thun nữ mang thiết kế đơn giản, thoải mái cho mọi hoạt động thường ngày. Chất liệu co giãn mềm mại, dễ dàng kết hợp nhiều phong cách, mang lại sự trẻ trung và thanh lịch.",
+    "gender": "nu"
+  },
+  {
+    "id": "13",
+    "name": "Đầm Thời Trang Elegant Chic",
+    "price": 3290000,
+    "image": "image/quanao/aonu3.avif",
+    "category": "ao",
+    "description": "Đầm thời trang nữ thanh lịch, thiết kế ôm dáng hiện đại, tôn vinh đường cong. Vải cao cấp mềm mại, thoáng mát, mang lại sự sang trọng trong các buổi tiệc tối hay sự kiện.",
+    "gender": "nu"
+  },
+  {
+    "id": "14",
+    "name": "Đầm Sang Trọng Versace Luxe",
+    "price": 4790000,
+    "image": "image/quanao/aonu4.avif",
+    "category": "ao",
+    "description": "Đầm Versace cao cấp, thiết kế tinh tế và sang trọng. Chất liệu lụa mềm mại, tạo cảm giác thoải mái. Phù hợp cho các bữa tiệc, sự kiện lớn, giúp người mặc luôn nổi bật.",
+    "gender": "nu"
+  },
+  {
+    "id": "15",
+    "name": "Vest Nữ Elegant Formal",
+    "price": 2590000,
+    "image": "image/quanao/vn3.avif",
+    "category": "ao",
+    "description": "Vest nữ phong cách hiện đại, form chuẩn giúp tôn dáng. Chất liệu vải cao cấp, đường may tinh xảo, phù hợp cho công sở hoặc các sự kiện trang trọng, tạo phong cách tự tin chuyên nghiệp.",
+    "gender": "nu"
+  },
+  {
+    "id": "16",
+    "name": "Áo Cardigan Nữ Cozy Classic",
+    "price": 1399000,
+    "image": "image/quanao/vn4.avif",
+    "category": "ao",
+    "description": "Áo cardigan nữ thiết kế nhẹ nhàng, thoải mái, phù hợp cho mùa thu đông. Chất liệu len mềm mại, dễ dàng phối cùng váy hoặc quần jeans, tạo phong cách nữ tính và thanh lịch.",
+    "gender": "nu"
+  },
+  {
+    "id": "17",
+    "name": "Đầm Versace Premium Edition",
+    "price": 3890000,
+    "image": "image/quanao/aonu6.avif",
+    "category": "ao",
+    "description": "Đầm Versace cao cấp, thiết kế ôm sát tôn dáng người mặc. Chất liệu mềm mại, sang trọng, mang đến sự quyến rũ và tự tin, lý tưởng cho những buổi tiệc hay sự kiện đặc biệt.",
+    "gender": "nu"
+  },
+  {
+    "id": "18",
+    "name": "Đầm Versace Urban Style",
+    "price": 2990000,
+    "image": "image/quanao/aonu7.avif",
+    "category": "ao",
+    "description": "Đầm Versace phong cách hiện đại, trẻ trung. Thiết kế tinh tế kết hợp với chất liệu cao cấp, thoải mái khi mặc. Phù hợp cho dạo phố, gặp gỡ bạn bè hoặc tham gia các sự kiện nhẹ nhàng.",
+    "gender": "nu"
+  },
+  {
+    "id": "19",
+    "name": "Đầm Thanh Lịch Classic Design",
+    "price": 1799000,
+    "image": "image/quanao/aonu8.avif",
+    "category": "ao",
+    "description": "Đầm nữ thanh lịch với đường cắt may tinh xảo, tôn lên sự duyên dáng. Vải mềm mại, thoáng mát, thích hợp mặc đi làm, dự tiệc hoặc tham gia các sự kiện quan trọng khác.",
+    "gender": "nu"
+  },
+  {
+    "id": "20",
+    "name": "Chân Váy Nữ Modern Fit",
+    "price": 2290000,
+    "image": "image/quanao/aonu5.avif",
+    "category": "ao",
+    "description": "Chân váy nữ phong cách hiện đại, dễ kết hợp với nhiều kiểu áo khác nhau. Chất liệu mềm mại, thoải mái, mang lại sự trẻ trung, nữ tính và phù hợp cho nhiều dịp khác nhau.",
+    "gender": "nu"
+  },
+
+
+
+{
+    "id": "21",
+    "name": "Túi Nam Classic Leather",
+    "price": 1999000,
+    "image": "image/tui/tuinam.avif",
+    "category": "tui",
+    "description": "Túi nam da cao cấp, thiết kế đơn giản nhưng sang trọng. Chất liệu bền bỉ, nhiều ngăn tiện lợi, phù hợp cho công việc hoặc đi chơi, mang lại phong cách lịch lãm và hiện đại.",
+    "gender": "nam"
+  },
+  {
+    "id": "22",
+    "name": "Túi Nam Luxury Handbag",
+    "price": 3290000,
+    "image": "image/tui/tuinam2.avif",
+    "category": "tui",
+    "description": "Túi xách nam sang trọng với chất liệu da mềm mịn, đường may tỉ mỉ. Kiểu dáng hiện đại, dễ phối cùng trang phục công sở hoặc dạo phố, mang đến vẻ ngoài đẳng cấp và tự tin.",
+    "gender": "nam"
+  },
+  {
+    "id": "23",
+    "name": "Túi Nam Urban Style",
+    "price": 1499000,
+    "image": "image/tui/tuinam3.avif",
+    "category": "tui",
+    "description": "Túi nam phong cách urban trẻ trung, thiết kế gọn nhẹ, tiện lợi. Chất liệu vải canvas cao cấp, chống nước, phù hợp cho đi làm, đi học hoặc dạo phố hằng ngày, rất thời trang.",
+    "gender": "nam"
+  },
+  {
+    "id": "24",
+    "name": "Túi Nam Premium Backpack",
+    "price": 2790000,
+    "image": "image/tui/balo.avif",
+    "category": "tui",
+    "description": "Ba lô nam cao cấp với kiểu dáng hiện đại, nhiều ngăn rộng rãi. Chất liệu chống thấm, dây đeo êm ái, phù hợp cho công việc, học tập hay du lịch, mang lại sự tiện lợi và thoải mái.",
+    "gender": "nam"
+  },
+  {
+    "id": "25",
+    "name": "Túi Nam Travel Edition",
+    "price": 590000,
+    "image": "image/tui/tuinam7.avif",
+    "category": "tui",
+    "description": "Túi nam du lịch tiện dụng, thiết kế chắc chắn với chất liệu da bền bỉ. Dung tích lớn, nhiều ngăn sắp xếp khoa học, lý tưởng cho các chuyến đi xa, vừa sang trọng vừa thực tế.",
+    "gender": "nam"
+  },
+  
+  {
+    "id": "26",
+    "name": "Túi Nữ Luxury Handbag",
+    "price": 3890000,
+    "image": "image/tui/tuinu1.avif",
+    "category": "tui",
+    "description": "Túi nữ sang trọng với thiết kế tinh tế, chất liệu da mềm mịn. Đường may chắc chắn, phù hợp cho đi tiệc hoặc dạo phố, mang lại sự thanh lịch và quý phái cho phái đẹp.",
+    "gender": "nu"
+  },
+  {
+    "id": "27",
+    "name": "Túi Nữ Classic Shoulder Bag",
+    "price": 2590000,
+    "image": "image/tui/tuinu3.avif",
+    "category": "tui",
+    "description": "Túi đeo vai nữ phong cách cổ điển, thiết kế nhỏ gọn và tiện lợi. Chất liệu cao cấp bền đẹp, dễ phối hợp nhiều trang phục, mang lại sự duyên dáng trong mọi hoàn cảnh sử dụng.",
+    "gender": "nu"
+  },
+  {
+    "id": "28",
+    "name": "Túi Nữ Premium Tote",
+    "price": 1999000,
+    "image": "image/tui/tuinu4.avif",
+    "category": "tui",
+    "description": "Túi tote nữ hiện đại, dung tích rộng rãi, phù hợp cho công việc và mua sắm. Chất liệu da cao cấp, dễ dàng vệ sinh, mang lại sự tiện lợi và phong cách thời trang trẻ trung.",
+    "gender": "nu"
+  },
+  {
+    "id": "29",
+    "name": "Túi Nữ Urban Crossbody",
+    "price": 1499000,
+    "image": "image/tui/tuinu5.avif",
+    "category": "tui",
+    "description": "Túi đeo chéo nữ phong cách urban trẻ trung, nhỏ gọn, dễ sử dụng. Chất liệu bền chắc, khóa kéo chắc chắn, thích hợp cho dạo phố, đi học hoặc đi làm, vừa thời trang vừa tiện dụng.",
+    "gender": "nu"
+  },
+  {
+    "id": "30",
+    "name": "Túi Nữ Elegant Party Bag",
+    "price": 4590000,
+    "image": "image/tui/tuinu6.avif",
+    "category": "tui",
+    "description": "Túi nữ dự tiệc cao cấp, thiết kế nhỏ gọn sang trọng. Chất liệu ánh kim nổi bật, mang lại sự quyến rũ và khác biệt, lý tưởng cho các buổi tiệc tối hoặc sự kiện quan trọng.",
+    "gender": "nu"
+  },
+  
+
+
+
+
+  {
+    "id": "31",
+    "name": "Ví Nam Classic Leather",
+    "price": 1799000,
+    "image": "image/tui/vinam.avif",
+    "category": "vi",
+    "description": "Ví nam da thật cao cấp, thiết kế gọn nhẹ với nhiều ngăn tiện lợi. Đường may tỉ mỉ, bền đẹp theo thời gian, phù hợp cho phong cách thanh lịch và sang trọng của phái mạnh.",
+    "gender": "nam"
+  },
+  {
+    "id": "32",
+    "name": "Ví Nữ Luxury Edition",
+    "price": 2499000,
+    "image": "image/tui/vinu1.avif",
+    "category": "vi",
+    "description": "Ví nữ cao cấp với thiết kế tinh tế, chất liệu da mềm mịn. Nhiều ngăn nhỏ tiện dụng để sắp xếp thẻ và tiền mặt, mang đến sự sang trọng và phong cách thời thượng.",
+    "gender": "nu"
+  },
+  {
+    "id": "33",
+    "name": "Ví Nam Premium Fold",
+    "price": 1399000,
+    "image": "image/tui/vinam2.avif",
+    "category": "vi",
+    "description": "Ví gập nam kiểu dáng đơn giản, hiện đại, chất liệu da bền bỉ. Thiết kế mỏng nhẹ, dễ dàng mang theo bên mình, phù hợp cho phong cách công sở lẫn đi chơi năng động.",
+    "gender": "nam"
+  },
+  {
+    "id": "34",
+    "name": "Ví Nữ Elegant Clutch",
+    "price": 3290000,
+    "image": "image/tui/vinu.avif",
+    "category": "vi",
+    "description": "Ví cầm tay nữ phong cách thanh lịch, nhỏ gọn, dễ phối hợp với trang phục dạ tiệc. Chất liệu da ánh kim cao cấp, mang lại sự quyến rũ và nổi bật trong mọi buổi sự kiện.",
+    "gender": "nu"
+  },
+  {
+    "id": "35",
+    "name": "Ví Nam Urban Slim",
+    "price": 1999000,
+    "image": "image/tui/vinam3.avif",
+    "category": "vi",
+    "description": "Ví nam dáng mỏng phong cách urban, thiết kế hiện đại, dễ bỏ túi quần. Chất liệu da thật mềm, bền bỉ, mang lại sự tiện lợi và thể hiện cá tính tinh tế của người sử dụng.",
+    "gender": "nam"
+  },
+
+
+
+
+
+
+
+  {
+    "id": "36",
+    "name": "Son Môi Luxury Matte",
+    "price": 1499000,
+    "image": "image/lamdep/ld.avif",
+    "category": "mypham",
+    "description": "Son môi cao cấp với chất son lì mịn, bền màu suốt nhiều giờ. Thiết kế sang trọng, bảng màu đa dạng giúp tôn lên vẻ đẹp quyến rũ và sự tự tin cho phái đẹp.",
+    "gender": "nu"
+  },
+  
+  {
+    "id": "37",
+    "name": "Kem Dưỡng Da Premium Care",
+    "price": 1999000,
+    "image": "image/lamdep/ld2.avif",
+    "category": "mypham",
+    "description": "Kem dưỡng da cao cấp, giàu dưỡng chất giúp cấp ẩm sâu, làm sáng và mịn da. Công thức dịu nhẹ, phù hợp với mọi loại da, mang lại làn da tươi trẻ và rạng rỡ mỗi ngày.",
+    "gender": "nu"
+  },
+  {
+    "id": "38",
+    "name": "Phấn Trang Điểm Natural Glow",
+    "price": 2790000,
+    "image": "image/lamdep/ld3.avif",
+    "category": "mypham",
+    "description": "Phấn trang điểm với kết cấu mỏng nhẹ, tạo lớp nền tự nhiên và lâu trôi. Giúp che khuyết điểm hiệu quả, kiểm soát dầu thừa, mang đến làn da sáng mịn và rạng ngời cả ngày.",
+    "gender": "nu"
+  },
+
+{
+    "id": "39",
+    "name": "Nước Hoa Elegant Scent",
+    "price": 3290000,
+    "image": "image/lamdep/ld1.avif",
+    "category": "mypham",
+    "description": "Nước hoa unisex hương hoa anh đào kết hợp cam bergamot tươi mát. Thích hợp cho cả nam và nữ, mang lại sự tự tin, quyến rũ và thanh lịch trong nhiều hoàn cảnh khác nhau.",
+    "gender": "unisex"
+  },
+ {
+    "id": "40",
+    "name": "Nước Hoa Unisex Luxury Bloom",
+    "price": 4590000,
+    "image": "image/lamdep/nh1.avif",
+    "category": "mypham",
+    "description": "Nước hoa unisex hương hoa anh đào kết hợp cam bergamot tươi mát. Thích hợp cho cả nam và nữ, mang lại sự tự tin, quyến rũ và thanh lịch trong nhiều hoàn cảnh khác nhau.",
+    "gender": "unisex"
+  },
+  {
+    "id": "41",
+    "name": "Nước Hoa Unisex Elegant Rose",
+    "price": 2499000,
+    "image": "image/lamdep/nh2.avif",
+    "category": "mypham",
+    "description": "Hương hoa hồng tinh tế hòa quyện cùng vani ngọt ngào, tạo nên mùi hương dễ chịu cho cả nam và nữ. Phù hợp đi làm, hẹn hò hoặc dự tiệc, mang lại sự cuốn hút bền lâu.",
+    "gender": "unisex"
+  },
+  {
+    "id": "42",
+    "name": "Nước Hoa Unisex Premium Desire",
+    "price": 3290000,
+    "image": "image/lamdep/nh3.avif",
+    "category": "mypham",
+    "description": "Nước hoa unisex hiện đại, hòa quyện hương trái cây tươi mát và gỗ trầm ấm. Lưu hương lâu, mang lại sự sang trọng, quyến rũ và phong cách cho cả nam lẫn nữ khi sử dụng.",
+    "gender": "unisex"
+  },
+   {
+    "id": "43",
+    "name": "Nước Hoa Unisex Premium Desire",
+    "price": 3290000,
+    "image": "image/lamdep/nh4.avif",
+    "category": "mypham",
+    "description": "Nước hoa unisex hiện đại, hòa quyện hương trái cây tươi mát và gỗ trầm ấm. Lưu hương lâu, mang lại sự sang trọng, quyến rũ và phong cách cho cả nam lẫn nữ khi sử dụng.",
+    "gender": "unisex"
+  },
+
+
+
+
+
+
+  {
+    "id": "44",
+    "name": "Giày Thể Thao LV Classic",
+    "price": 2500000,
+    "image": "image/giay/v3.avif",
+    "category": "giay",
+    "description": "Giày da nam cao cấp, thiết kế đơn giản nhưng tinh tế. Chất liệu da thật bền bỉ, dễ vệ sinh, phù hợp cho đi làm hoặc dự tiệc, mang lại sự sang trọng và lịch lãm.",
+    "gender": "nam"
+  },
+  {
+    "id": "45",
+    "name": "Giày Nam Sport Sneakers",
+    "price": 1899000,
+    "image": "image/giay/giaynam2.avif",
+    "category": "giay",
+    "description": "Giày thể thao nam phong cách năng động, chất liệu nhẹ và thoáng khí. Đế cao su bền chắc, chống trơn trượt, phù hợp cho các hoạt động thường ngày và phong cách đường phố trẻ trung.",
+    "gender": "nam"
+  },
+  {
+    "id": "46",
+    "name": "Giày Nam Premium Loafer",
+    "price": 3990000,
+    "image": "image/giay/giaynam3.avif",
+    "category": "giay",
+    "description": "Giày lười nam sang trọng, chất liệu da mềm mại, đường may tinh xảo. Kiểu dáng hiện đại, thoải mái khi sử dụng, lý tưởng cho môi trường công sở và các dịp trang trọng khác.",
+    "gender": "nam"
+  },
+  {
+    "id": "47",
+    "name": "Giày Nam Urban Boots",
+    "price": 4590000,
+    "image": "image/giay/giaynam.avif",
+    "category": "giay",
+    "description": "Giày boots nam phong cách urban mạnh mẽ, làm từ da cao cấp. Đế dày chắc chắn, thích hợp cho mùa đông hoặc phong cách đường phố cá tính, mang lại sự tự tin và phong trần.",
+    "gender": "nam"
+  },
+  {
+    "id": "48",
+    "name": "Giày Nam Casual Canvas",
+    "price": 1599000,
+    "image": "image/giay/giaynam1.avif",
+    "category": "giay",
+    "description": "Giày vải canvas nam thoải mái, nhẹ nhàng, dễ phối cùng nhiều trang phục. Thích hợp sử dụng hằng ngày, từ đi học, đi làm đến đi chơi, mang lại sự trẻ trung và năng động.",
+    "gender": "nam"
+  },
+  {
+    "id": "49",
+    "name": "Giày Nữ Elegant Heels",
+    "price": 3290000,
+    "image": "image/giay/giaynu1.avif",
+    "category": "giay",
+    "description": "Giày cao gót nữ sang trọng, thiết kế thanh mảnh tôn dáng. Chất liệu da cao cấp, gót chắc chắn, mang lại sự tự tin và quyến rũ cho các buổi tiệc hoặc sự kiện đặc biệt.",
+    "gender": "nu"
+  },
+  {
+    "id": "50",
+    "name": "Giày Nữ Casual Sneakers",
+    "price": 1799000,
+    "image": "image/giay/giaynu2.avif",
+    "category": "giay",
+    "description": "Giày thể thao nữ phong cách trẻ trung, thiết kế nhẹ và thoáng khí. Đế cao su chống trượt, phù hợp đi học, đi chơi hoặc dạo phố, mang lại sự thoải mái và năng động cả ngày.",
+    "gender": "nu"
+  },
+  {
+    "id": "51",
+    "name": "Giày Nữ Luxury Sandals",
+    "price": 2499000,
+    "image": "image/giay/giaynu3.avif",
+    "category": "giay",
+    "description": "Dép sandal nữ cao cấp, thiết kế tinh tế với quai da mềm. Phù hợp cho mùa hè, dễ phối hợp nhiều trang phục, mang lại sự thoải mái và phong cách nữ tính thanh lịch.",
+    "gender": "nu"
+  },
+  {
+    "id": "52",
+    "name": "Giày Nữ Premium Boots",
+    "price": 3990000,
+    "image": "image/giay/vn2.avif",
+    "category": "giay",
+    "description": "Giày boots nữ cao cấp, kiểu dáng hiện đại, chất liệu da bền chắc. Đế chống trượt, êm ái khi di chuyển, thích hợp cho mùa lạnh và phong cách thời trang mạnh mẽ, cá tính.",
+    "gender": "nu"
+  },
+  {
+    "id": "53",
+    "name": "Giày Nữ Classic Flat",
+    "price": 1399000,
+    "image": "image/giay/giaynu.avif",
+    "category": "giay",
+    "description": "Giày bệt nữ phong cách cổ điển, thiết kế đơn giản nhưng thanh lịch. Chất liệu mềm mại, thoải mái khi đi làm hoặc dạo phố, mang lại sự nữ tính và tiện dụng cho phái đẹp.",
+    "gender": "nu"
+  }
+
+
+
+
+
+
+]
+
+

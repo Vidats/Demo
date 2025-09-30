@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V & Đ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="wed.css" />
+    <link rel="icon" type="logo.png" href="image/logo.png" />
+    <style>
+      /* CSS CHO TRANG SẢN PHẨM */
+      .product-detail-flex {
+        display: flex;
+        width: 100vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: #fff;
+        align-items: stretch;
+      }
+
+      .product-image-side,
+      .product-detail-info {
+        width: 50%;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-detail-img {
+        max-width: 95%;
+        max-height: 500px;
+        width: auto;
+        height: auto;
+        margin: auto;
+        object-fit: contain;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      }
+
+      .product-detail-info {
+        background: #fff;
+        width: 50%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 48px;
+        padding-top: 48px;
+      }
+
+      .product-detail-box {
+        width: 100%;
+        max-width: 420px;
+        padding: 0;
+      }
+
+      .product-title {
+        font-size: 2.6rem;
+        font-family: "Playfair Display", "Times New Roman", Times, serif;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+      }
+
+      .product-price {
+        font-size: 2.1rem;
+        font-weight: bold;
+        color: #d32f2f;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+      }
+
+      .product-desc {
+        font-size: 1.15rem;
+        color: #444;
+        margin-bottom: 32px;
+        line-height: 1.7;
+      }
+
+      .product-qty {
+        border-radius: 8px;
+        border: 1.5px solid #d32f2f;
+        padding: 12px 18px;
+        font-size: 1.2rem;
+        width: 130px;
+        margin-bottom: 18px;
+      }
+
+      .product-btn {
+        border-radius: 24px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        padding: 16px 0;
+        min-width: 220px;
+        letter-spacing: 1px;
+        transition: background 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+
+      .btn-outline-dark {
+        border: 2px solid #222;
+        background: #fff;
+        color: #222;
+      }
+
+      .btn-outline-dark:hover {
+        background: #222;
+        color: #fff;
+      }
+
+      .btn-dark {
+        background: #d32f2f;
+        color: #fff;
+        border: none;
+      }
+
+      .btn-dark:hover {
+        background: #b71c1c;
+      }
+
+      @media (max-width: 767.98px) {
+        .product-detail-flex {
+          flex-direction: column;
+          min-height: 200px;
+          height: auto;
+        }
+
+        .product-image-side,
+        .product-detail-info {
+          padding-left: 16px;
+          padding-top: 16px;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+
+        .product-detail-img {
+          max-width: 95vw;
+          max-height: 220px;
+        }
+
+        .product-detail-box {
+          padding: 20px 8px;
+          max-width: 95vw;
+        }
+
+        .product-title {
+          font-size: 1.5rem;
+        }
+
+        .product-price {
+          font-size: 1.3rem;
+        }
+
+        .product-desc {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <div class="menu" onclick="toggleMenu()">
+          <img src="image/menu.png" alt="Menu Icon" />
+        </div>
+        <div class="search-box">
+          <form action="sanpham.html" method="get">
+            <img
+              src="image/timkiem.png"
+              alt="Search Icon"
+              class="search-icon"
+              onclick="this.closest('form').submit()"
+            />
+            <input
+              class="form-control search-input"
+              name="q"
+              type="search"
+              placeholder="Tìm sản phẩm..."
+              aria-label="Search"
+              style="display: none"
+            />
+          </form>
+        </div>
+      </div>
+      <a href="wed.html">
+        <div class="banner">
+          <h1>V & Đ</h1>
+        </div>
+      </a>
+      <div class="header-right">
+        <a href="form.html" onclick="openLoginForm()" class="user-link">
+          <div class="user-icon">
+            <img src="image/login1.png" alt="User Icon" />
+          </div>
+        </a>
+        <a href="cart.html" class="shoppingcart">
+          <img src="image/shoppingcart.png" alt="Shopping Cart" />
+        </a>
+      </div>
+    </div>
+
+    <div class="sliding-menu" id="slidingMenu">
+      <div class="menu-header">
+        <h3>DANH MỤC SẢN PHẨM</h3>
+        <button onclick="toggleMenu()" class="close-btn">&times;</button>
+      </div>
+      <div class="menu-content">
+        <ul class="menu-list">
+          <li class="menu-category">
+            <span class="category-title">Tất Cả Sản phẩm</span>
+            <a href="sanpham.html?gender=nam" class="category-title">Đồ Nam</a>
+            <a href="sanpham.html?gender=nu" class="category-title">Đồ Nữ</a>
+            <span class="category-title">Đồng hồ</span>
+            <span class="category-title">Giày</span>
+            <span class="category-title">Túi xách và ví</span>
+            <span class="category-title">Trang sức</span>
+            <span class="category-title">Các phụ kiện du lịch</span>
+            <span class="category-title">Nước hoa và Làm đẹp</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="navbar bg-light border-bottom">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="wed.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sanpham.html">Sản Phẩm </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dichvu.html">Dịch Vụ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="product-detail-flex">
+      <div class="product-image-side">
+        <img id="productImage" class="product-detail-img" src="" alt="" />
+      </div>
+      <div class="product-detail-info">
+        <div class="product-detail-box">
+          <h1 id="productName" class="product-title mb-3"></h1>
+          <div class="product-price mb-3" id="productPrice"></div>
+          <div class="product-desc mb-4" id="productDesc"></div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Số lượng:</label>
+            <input
+              type="number"
+              id="quantity"
+              class="form-control product-qty"
+              value="1"
+              min="1"
+            />
+          </div>
+          <div class="d-flex flex-column gap-2">
+            <button class="btn btn-outline-dark btn-lg product-btn">
+              THÊM VÀO GIỎ HÀNG
+            </button>
+            <button class="btn btn-dark btn-lg product-btn">
+              THANH TOÁN SẢN PHẨM
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer-columns">
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>HỖ TRỢ</h4>
+            <p>
+              Quý khách có thể liên hệ với chúng tôi qua<br />
+              <a href="#">Hotline +84 819090061</a>, <a href="#">Zalo</a>,
+              <a href="#">Email</a>, hoặc
+              <a href="#">các phương thức liên hệ khác</a>.
+            </p>
+            <ul>
+              <li><a href="#">Câu hỏi thường gặp</a></li>
+              <li><a href="#">Chăm sóc sản phẩm</a></li>
+              <li><a href="#">Cửa hàng</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>DỊCH VỤ</h4>
+            <ul>
+              <li><a href="#">Dịch vụ bảo hành</a></li>
+              <li><a href="#">Dịch vụ đổi trả</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+              <li><a href="#">Phương thức thanh toán</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>VỀ V & Đ</h4>
+            <ul>
+              <li><a href="#">Thông tin</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Cửa hàng</a></li>
+              <li><a href="#">Work With Us</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+            <p>
+              <a href="#">Đăng ký</a> nhận thư điện tử để cập nhật những tin tức
+              mới nhất từ V & Đ, bao gồm các buổi ra mắt độc quyền trực tuyến và
+              bộ sưu tập mới.
+            </p>
+            <ul>
+              <li><a href="#">Theo dõi chúng tôi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="left">
+            <img
+              src="image/vn.png"
+              alt="Việt Nam"
+              style="height: 14px; vertical-align: middle; margin-right: 5px"
+            />
+            <a href="#">Việt Nam</a>
+          </div>
+          <div class="center">
+            <strong>V & Đ</strong>
+          </div>
+          <div class="right">
+            <a href="#">Sơ đồ trang web</a> |
+            <a href="#">Pháp lý & Quyền riêng tư</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function getParam(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+
+      const productId = getParam("id");
+
+      fetch("products.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const product = data.find((p) => p.id === productId);
+          if (product) {
+            document.getElementById("productImage").src = product.image;
+            document.getElementById("productImage").alt = product.name;
+            document.getElementById("productName").textContent = product.name;
+            document.getElementById("productPrice").textContent =
+              product.price.toLocaleString() + " đ";
+            document.getElementById("productDesc").textContent =
+              product.description || "";
+
+            document.querySelector(".btn-outline-dark").onclick = function () {
+              const id = product.id;
+              const name = product.name;
+              const image = product.image;
+              const price = product.price;
+              const qty =
+                parseInt(document.getElementById("quantity").value) || 1;
+
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              const idx = cart.findIndex((item) => item.id === id);
+              if (idx >= 0) {
+                cart[idx].qty += qty;
+              } else {
+                cart.push({ id, name, image, price, qty });
+              }
+              localStorage.setItem("cart", JSON.stringify(cart));
+              alert("Đã thêm vào giỏ hàng!");
+            };
+
+            document.querySelector(".btn-dark").onclick = function () {
+              const id = product.id;
+              const name = product.name;
+              const image = product.image;
+              const price = product.price;
+              const qty =
+                parseInt(document.getElementById("quantity").value) || 1;
+
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              const idx = cart.findIndex((item) => item.id === id);
+              if (idx >= 0) {
+                cart[idx].qty += qty;
+              } else {
+                cart.push({ id, name, image, price, qty });
+              }
+              localStorage.setItem("cart", JSON.stringify(cart));
+
+              // CHUYỂN HƯỚNG SANG TRANG GIỎ HÀNG RIÊNG
+              window.location.href = "cart.html";
+            };
+          } else {
+            document.querySelector(".container").innerHTML =
+              '<h3 class="text-center text-danger">Không tìm thấy sản phẩm!</h3>';
+          }
+        });
+    </script>
+    <script src="js.js"></script>
+  </body>
+</html>

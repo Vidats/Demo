@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V & Đ</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="wed.css" />
+    <link rel="icon" type="logo.png" href="image/logo.png" />
+    <style>
+      /* CSS CHO TRANG GIỎ HÀNG ĐÃ ĐƯỢC CHỈNH SỬA */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      .cart-page-container {
+        padding: 50px 20px;
+        max-width: 900px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .cart-list-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .cart-list-table th,
+      .cart-list-table td {
+        padding: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        vertical-align: middle;
+        text-align: left;
+      }
+      .cart-list-table th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: #555;
+        text-transform: uppercase;
+      }
+      .cart-item-row {
+        transition: background-color 0.3s ease;
+      }
+      .cart-item-row:hover {
+        background-color: #fbfbfb;
+      }
+      .cart-item-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .cart-item-name {
+        font-weight: 600;
+        color: #333;
+      }
+      .cart-item-price {
+        color: #d32f2f;
+        font-weight: bold;
+      }
+      .cart-item-total {
+        font-weight: bold;
+        color: #1a1a1a;
+      }
+      .cart-item-qty {
+        width: 70px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 6px;
+      }
+      .btn-remove {
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .btn-remove:hover {
+        background-color: #d32f2f;
+      }
+      .cart-total-summary {
+        text-align: right;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #2c3e50;
+        padding-right: 15px;
+        border-top: 2px solid #eee;
+        padding-top: 20px;
+      }
+      .checkout-form-container {
+        margin-top: 40px;
+        padding: 30px;
+        background-color: #fdfdfd;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+      }
+      .checkout-form-container h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #34495e;
+        margin-bottom: 20px;
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 10px;
+      }
+      .form-label {
+        font-weight: bold;
+      }
+      .form-control {
+        border-radius: 8px;
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+      .btn-order {
+        background-color: #d32f2f;
+        color: #fff;
+        font-weight: bold;
+        padding: 15px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+      .btn-order:hover {
+        background-color: #b71c1c;
+      }
+      @media (max-width: 768px) {
+        .cart-list-table th,
+        .cart-list-table td {
+          padding: 10px;
+        }
+        .cart-list-table thead {
+          display: none;
+        }
+        .cart-list-table,
+        .cart-item-row {
+          display: block;
+          border: 1px solid #e0e0e0;
+          margin-bottom: 15px;
+          border-radius: 8px;
+        }
+        .cart-item-row td {
+          display: block;
+          text-align: right;
+          border-bottom: none;
+          padding: 8px 15px;
+        }
+        .cart-item-row td:before {
+          content: attr(data-label);
+          font-weight: bold;
+          float: left;
+          text-transform: uppercase;
+        }
+        .cart-item-image {
+          float: left;
+          margin-right: 15px;
+        }
+        .cart-item-qty {
+          width: 100px;
+          float: right;
+        }
+        .btn-remove {
+          margin-top: 10px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <div class="menu" onclick="toggleMenu()">
+          <img src="image/menu.png" alt="Menu Icon" />
+        </div>
+        <div class="search-box">
+          <form action="sanpham.html" method="get">
+            <img
+              src="image/timkiem.png"
+              alt="Search Icon"
+              class="search-icon"
+              onclick="this.closest('form').submit()"
+            />
+            <input
+              class="form-control search-input"
+              name="q"
+              type="search"
+              placeholder="Tìm sản phẩm..."
+              aria-label="Search"
+              style="display: none"
+            />
+          </form>
+        </div>
+      </div>
+      <a href="wed.html">
+        <div class="banner">
+          <h1>V & Đ</h1>
+        </div>
+      </a>
+      <div class="header-right">
+        <a href="form.html" onclick="openLoginForm()" class="user-link">
+          <div class="user-icon">
+            <img src="image/login1.png" alt="User Icon" />
+          </div>
+        </a>
+        <a href="cart.html" class="shoppingcart">
+          <img src="image/shoppingcart.png" alt="Shopping Cart" />
+        </a>
+      </div>
+    </div>
+    <div class="sliding-menu" id="slidingMenu">
+      <div class="menu-header">
+        <h3>DANH MỤC SẢN PHẨM</h3>
+        <button onclick="toggleMenu()" class="close-btn">&times;</button>
+      </div>
+      <div class="menu-content">
+        <ul class="menu-list">
+          <li class="menu-category">
+            <span class="category-title">Tất Cả Sản phẩm</span>
+            <a href="sanpham.html?gender=nam" class="category-title">Đồ Nam</a>
+            <a href="sanpham.html?gender=nu" class="category-title">Đồ Nữ</a>
+            <span class="category-title">Đồng hồ</span>
+            <span class="category-title">Giày</span>
+            <span class="category-title">Túi xách và ví</span>
+            <span class="category-title">Trang sức</span>
+            <span class="category-title">Các phụ kiện du lịch</span>
+            <span class="category-title">Nước hoa và Làm đẹp</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navbar bg-light border-bottom">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="wed.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sanpham.html">Sản Phẩm </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dichvu.html">Dịch Vụ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="cart-page-container">
+      <h2>GIỎ HÀNG CỦA TÔI</h2>
+      <div id="cartList"></div>
+      <div id="cartTotal" class="cart-total-summary"></div>
+
+      <div class="checkout-form-container">
+        <h3>Thông tin thanh toán</h3>
+        <form id="orderForm" class="row g-3">
+          <div class="col-md-6">
+            <label for="orderName" class="form-label">Họ và tên</label>
+            <input type="text" class="form-control" id="orderName" required />
+          </div>
+          <div class="col-md-6">
+            <label for="orderEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="orderEmail" required />
+          </div>
+          <div class="col-12">
+            <label for="orderAddress" class="form-label">Địa chỉ</label>
+            <input type="text" class="form-control" id="orderAddress" required />
+          </div>
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-order w-100">ĐẶT HÀNG</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer-columns">
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>HỖ TRỢ</h4>
+            <p>
+              Quý khách có thể liên hệ với chúng tôi qua<br />
+              <a href="#">Hotline +84 819090061</a>, <a href="#">Zalo</a>,
+              <a href="#">Email</a>, hoặc
+              <a href="#">các phương thức liên hệ khác</a>.
+            </p>
+            <ul>
+              <li><a href="#">Câu hỏi thường gặp</a></li>
+              <li><a href="#">Chăm sóc sản phẩm</a></li>
+              <li><a href="#">Cửa hàng</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>DỊCH VỤ</h4>
+            <ul>
+              <li><a href="#">Dịch vụ bảo hành</a></li>
+              <li><a href="#">Dịch vụ đổi trả</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+              <li><a href="#">Phương thức thanh toán</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>VỀ V & Đ</h4>
+            <ul>
+              <li><a href="#">Thông tin</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Cửa hàng</a></li>
+              <li><a href="#">Work With Us</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 footer-col">
+            <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+            <p>
+              <a href="#">Đăng ký</a> nhận thư điện tử để cập nhật những tin tức
+              mới nhất từ V & Đ, bao gồm các buổi ra mắt độc quyền trực tuyến và
+              bộ sưu tập mới.
+            </p>
+            <ul>
+              <li><a href="#">Theo dõi chúng tôi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="left">
+            <img
+              src="image/vn.png"
+              alt="Việt Nam"
+              style="height: 14px; vertical-align: middle; margin-right: 5px"
+            />
+            <a href="#">Việt Nam</a>
+          </div>
+          <div class="center">
+            <strong>V & Đ</strong>
+          </div>
+          <div class="right">
+            <a href="#">Sơ đồ trang web</a> |
+            <a href="#">Pháp lý & Quyền riêng tư</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function openshoppingcart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let html = "";
+        let total = 0;
+        if (cart.length === 0) {
+          html =
+            '<p class="text-center text-muted">Giỏ hàng của bạn đang trống.</p>';
+        } else {
+          html = `
+            <table class="cart-list-table">
+                <thead>
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+          cart.forEach((item, idx) => {
+            const itemTotal = item.price * item.qty;
+            total += itemTotal;
+            html += `
+                <tr class="cart-item-row">
+                    <td>
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    </td>
+                    <td class="cart-item-name" data-label="Tên sản phẩm">${
+                      item.name
+                    }</td>
+                    <td class="cart-item-price" data-label="Giá">${item.price.toLocaleString()} đ</td>
+                    <td data-label="Số lượng">
+                        <input type="number" min="1" value="${
+                          item.qty
+                        }" class="form-control cart-item-qty" onchange="updateQty(${idx}, this.value)">
+                    </td>
+                    <td class="cart-item-total" data-label="Thành tiền">${itemTotal.toLocaleString()} đ</td>
+                    <td>
+                        <button onclick="removeCart(${idx})" class="btn-remove">Xóa</button>
+                    </td>
+                </tr>
+            `;
+          });
+          html += `
+                </tbody>
+            </table>
+        `;
+        }
+        document.getElementById("cartList").innerHTML = html;
+        document.getElementById(
+          "cartTotal"
+        ).innerText = `Tổng cộng: ${total.toLocaleString()} đ`;
+      }
+      function updateQty(idx, val) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart[idx].qty = parseInt(val) || 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        openshoppingcart();
+      }
+      function removeCart(idx) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(idx, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        openshoppingcart();
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        openshoppingcart();
+        const EMAILJS_CONFIG = {
+          SERVICE_ID: "service_4z5w83q",
+          TEMPLATE_ID: "template_chzb76d",
+          USER_ID: "o6j-W1i8Fmlukggzy",
+        };
+        emailjs.init(EMAILJS_CONFIG.USER_ID);
+        const formatCartItems = (cartItems) => {
+          return cartItems
+            .map(
+              (item) =>
+                `- ${item.name} - SL: ${
+                  item.qty
+                } - Giá: ${item.price.toLocaleString()} đ`
+            )
+            .join("\n");
+        };
+        const orderForm = document.getElementById("orderForm");
+        if (orderForm) {
+          orderForm.onsubmit = function (e) {
+            e.preventDefault();
+            const name = document.getElementById("orderName").value;
+            const address = document.getElementById("orderAddress").value;
+            const email = document.getElementById("orderEmail").value;
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart.length === 0) {
+              alert("Giỏ hàng của bạn đang trống!");
+              return;
+            }
+            let total = cart.reduce(
+              (sum, item) => sum + item.price * item.qty,
+              0
+            );
+            emailjs
+              .send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, {
+                customer_name: name,
+                customer_address: address,
+                customer_email: email,
+                items: formatCartItems(cart),
+                total_amount: total.toLocaleString() + " đ",
+                order_date: new Date().toLocaleString("vi-VN"),
+              })
+              .then(
+                function () {
+                  alert("Đặt hàng thành công! Thông tin đã gửi tới email.");
+                  localStorage.removeItem("cart");
+                  openshoppingcart();
+                },
+                function (error) {
+                  alert("Gửi email thất bại: " + error.text);
+                }
+              );
+          };
+        }
+      });
+    </script>
+    <script src="js.js"></script>
+  </body>
+</html>

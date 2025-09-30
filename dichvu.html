@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>V & Đ - Dịch Vụ Khách Hàng</title>
+    <link rel="icon" type="image/png" href="image/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="wed.css">
+   
+    <style>
+      :root {
+        --primary-color: #333;
+        --secondary-color: #555;
+        --accent-color: #a68b5a; /* Màu vàng đồng tinh tế */
+        --light-bg-color: #f7f5f2;
+        --dark-bg-color: #fff;
+        --heading-font: 'Playfair Display', serif;
+        --body-font: 'Roboto', sans-serif;
+      }
+
+     
+
+      
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section {
+        padding: 80px 0;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+        color:black;
+      }
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      h2 {
+        font-family: var(--heading-font);
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        color: var(--primary-color);
+      }
+
+      h2::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 2px;
+        background-color: var(--accent-color);
+        margin: 10px auto 0;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+      }
+
+      .service-item {
+        background: var(--light-bg-color);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .service-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--accent-color);
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+      }
+      .service-item:hover::before {
+        transform: translateY(0);
+      }
+
+      .service-item .icon {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .service-item:hover .icon {
+        transform: scale(1.1);
+      }
+
+      .service-item h3 {
+        font-family: var(--heading-font);
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .service-item p {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        text-align: justify;
+      }
+
+      .policy-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 40px;
+        text-align: left;
+      }
+      .policy-list li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+      }
+      .policy-list li::before {
+        content: '\f058'; /* Biểu tượng dấu tích từ Font Awesome */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+      }
+
+      .payment-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .payment-options .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 200px;
+      }
+      .payment-options .icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-overlay h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+<div class="header">
+    <div class="header-left">
+        <div class="menu" onclick="toggleMenu()">
+            <img src="image/menu.png" alt="Menu Icon">
+        </div>
+        <div class="search-box">
+  <form action="sanpham.html" method="get">
+    <img src="image/timkiem.png" alt="Search Icon" class="search-icon" onclick="this.closest('form').submit()">
+    <input class="form-control search-input" name="q" type="search" placeholder="Tìm sản phẩm..." aria-label="Search" style="display:none;">
+  </form>
+</div>
+
+    </div>      
+    <a href="wed.html">
+    <div class="banner">
+        <h1>V & Đ</h1>
+    </div></a>
+    <div class="header-right">
+       <a href="form.html" onclick="openLoginForm()" class="user-link">
+                    <div class="user-icon">
+                        <img src="image/login1.png" alt="User Icon">
+                    </div>
+                </a>
+        <a href="cart.html" class="shoppingcart">
+          <img src="image/shoppingcart.png" alt="Shopping Cart" />
+        </a>
+    </div>
+</div>
+
+<!-- Sliding Menu -->
+<div class="sliding-menu" id="slidingMenu">
+    <div class="menu-header">
+        <h3>DANH MỤC SẢN PHẨM</h3>
+        <button onclick="toggleMenu()" class="close-btn">&times;</button>
+    </div>
+    <div class="menu-content">
+        <ul class="menu-list">
+            <li class="menu-category">
+                  <span class="category-title"> Tất Cả Sản phẩm</span>
+                  <a href="sanpham.html?gender=nam" class="category-title">Đồ Nam</a>
+                    <a href="sanpham.html?gender=nu" class="category-title">Đồ Nữ</a>
+                    <span class="category-title">Đồng hồ</span>
+                    <span class="category-title">Giày</span>
+                    <span class="category-title">Túi xách và ví</span>
+                    <span class="category-title">Trang sức</span>
+                   <span class="category-title">Các phụ kiện du lịch</span>
+                     <span class="category-title">Nước hoa và Làm đẹp</span>
+                  
+                </li>
+                
+        </ul>
+    </div>
+</div>
+
+<!-- navbar -->
+<nav class="navbar bg-light border-bottom">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="wed.html">Trang Chủ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sanpham.html">Sản Phẩm </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="dichvu.html">Dịch Vụ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="hero">
+      <div class="hero-overlay">
+        <h1>Dịch Vụ & Chính Sách</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <h2>Cam Kết Từ V & Đ</h2>
+        <div class="service-grid">
+          <div class="service-item">
+            <i class="fas fa-shield-alt icon"></i>
+            <h3>Dịch Vụ Bảo Hành</h3>
+            <p>
+              Mỗi sản phẩm từ V & Đ không chỉ là một món đồ thời trang, mà còn
+              là một cam kết về chất lượng. Chúng tôi tự tin vào tay nghề của
+              đội ngũ thợ may và chất liệu cao cấp đã chọn lựa. Vì vậy, V & Đ
+              cung cấp chính sách bảo hành trọn đời cho các đường may và khóa
+              kéo. Chúng tôi tin rằng, một sản phẩm cao cấp cần đồng hành cùng
+              bạn mãi mãi, không chỉ qua một vài mùa.
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-sync-alt icon"></i>
+            <h3>Dịch Vụ Đổi Trả</h3>
+            <p>
+              Chúng tôi hiểu rằng, đôi khi sự lựa chọn đầu tiên chưa hoàn hảo.
+              V & Đ hỗ trợ đổi trả sản phẩm trong vòng 30 ngày kể từ ngày mua,
+              áp dụng cho các sản phẩm còn nguyên tem mác và chưa qua sử dụng.
+              Quy trình đổi trả được thực hiện nhanh chóng, chuyên nghiệp, đảm
+              bảo bạn luôn tìm được món đồ ưng ý và hài lòng nhất.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="chinh-sach-van-chuyen">
+        <h2>Chính Sách Vận Chuyển</h2>
+        <div class="section-content">
+          <p>
+            V & Đ hợp tác với các đối tác vận chuyển hàng đầu để mang sản phẩm
+            đến tay bạn một cách nhanh chóng và an toàn nhất.
+          </p>
+          <ul class="policy-list">
+            <li>
+              <strong>Miễn phí vận chuyển:</strong> Áp dụng cho mọi đơn hàng có
+              giá trị trên 2.000.000 VNĐ.
+            </li>
+            <li>
+              <strong>Đóng gói tinh tế:</strong> Mỗi sản phẩm được gói cẩn thận
+              trong hộp đựng sang trọng, đảm bảo không bị hư hại trong quá trình
+              di chuyển.
+            </li>
+            <li>
+              <strong>Thời gian giao hàng:</strong> Từ 2-3 ngày làm việc trong
+              khu vực nội thành và 3-5 ngày làm việc đối với các tỉnh thành khác.
+            </li>
+            <li>
+              <strong>Theo dõi đơn hàng:</strong> Chúng tôi sẽ cung cấp mã theo
+              dõi để bạn có thể cập nhật trạng thái đơn hàng mọi lúc.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="phuong-thuc-thanh-toan">
+        <h2>Phương Thức Thanh Toán</h2>
+        <p>
+          Chúng tôi cung cấp nhiều tùy chọn thanh toán linh hoạt và bảo mật để
+          mang lại sự thuận tiện tối đa cho bạn.
+        </p>
+        <div class="payment-options">
+          <div class="item">
+            <i class="fas fa-credit-card icon"></i>
+            <h3>Thẻ Tín Dụng</h3>
+            <p>
+              Chấp nhận các loại thẻ Visa, Mastercard, American Express. Giao
+              dịch được mã hóa và bảo mật tuyệt đối.
+            </p>
+          </div>
+          <div class="item">
+            <i class="fas fa-wallet icon"></i>
+            <h3>Thanh Toán Khi Nhận Hàng (COD)</h3>
+            <p>
+              Thanh toán trực tiếp cho nhân viên giao hàng khi bạn nhận được sản
+              phẩm.
+            </p>
+          </div>
+          <div class="item">
+            <i class="fas fa-qrcode icon"></i>
+            <h3>Chuyển Khoản Ngân Hàng</h3>
+            <p>
+              Thanh toán qua tài khoản ngân hàng của chúng tôi, áp dụng cho
+              khách hàng ở Việt Nam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+<footer class="footer">
+  <div class="container">
+    <div class="row footer-columns">
+      <!-- Cột 1 -->
+      <div class="col-12 col-md-6 col-xl-3  footer-col">
+        <h4>HỖ TRỢ</h4>
+        <p>
+          Quý khách có thể liên hệ với chúng tôi qua<br>
+          <a href="#">Hotline +84 819090061</a>,
+          <a href="#">Zalo</a>,
+          <a href="#">Email</a>, hoặc
+          <a href="#">các phương thức liên hệ khác</a>.
+        </p>
+        <ul>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Chăm sóc sản phẩm</a></li>
+          <li><a href="#">Cửa hàng</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 2 -->
+      <div class="col-12 col-md-6 col-xl-3  footer-col">
+        <h4>DỊCH VỤ</h4>
+        <ul>
+          <li><a href="#">Dịch vụ bảo hành</a></li>
+          <li><a href="#">Dịch vụ đổi trả</a></li>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Phương thức thanh toán</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 3 -->
+      <div class="col-12 col-md-6 col-xl-3  footer-col">
+        <h4>VỀ V & Đ</h4>
+        <ul>
+          <li><a href="#">Thông tin</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Cửa hàng</a></li>
+          <li><a href="#">Work With Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 4 -->
+      <div class="col-12 col-md-6 col-xl-3  footer-col">
+        <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+        <p>
+          <a href="#">Đăng ký</a> nhận thư điện tử để cập nhật những tin tức mới nhất từ V & Đ, bao gồm các buổi ra mắt độc quyền trực tuyến và bộ sưu tập mới.
+        </p>
+        <ul>
+          <li><a href="#">Theo dõi chúng tôi</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <div class="left">
+        <img src="image/vn.png" alt="Việt Nam" style="height: 14px; vertical-align: middle; margin-right: 5px;">
+        <a href="#">Việt Nam</a>
+      </div>
+      <div class="center">
+        <strong>V & Đ</strong>
+      </div>
+      <div class="right">
+        <a href="#">Sơ đồ trang web</a> |
+        <a href="#">Pháp lý & Quyền riêng tư</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js.js"></script>
+  </body>
+</html>
