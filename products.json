@@ -504,6 +504,223 @@
     "category": "giay",
     "description": "Giày bệt nữ phong cách cổ điển, thiết kế đơn giản nhưng thanh lịch. Chất liệu mềm mại, thoải mái khi đi làm hoặc dạo phố, mang lại sự nữ tính và tiện dụng cho phái đẹp.",
     "gender": "nu"
+  },
+
+
+
+
+
+
+
+  {
+    "id": "54",
+    "name": "Cài Tóc Nữ Luxury Pearl",
+    "price": 1299000,
+    "image": "image/phukien/buoctoc.avif",
+    "category": "phukien",
+    "description": "Cài tóc nữ thiết kế sang trọng với chi tiết ngọc trai tinh tế. Phù hợp cho tiệc tùng hoặc dạo phố, giúp mái tóc thêm nổi bật, mang lại sự dịu dàng và quyến rũ.",
+    "gender": "nu"
+  },
+  {
+    "id": "55",
+    "name": "Cài Tóc Nữ Elegant Flower",
+    "price": 999999,
+    "image": "image/phukien/buoctoc2.avif",
+    "category": "phukien",
+    "description": "Cài tóc nữ phong cách nhẹ nhàng với họa tiết hoa tinh xảo. Chất liệu bền đẹp, dễ sử dụng, thích hợp cho nhiều kiểu tóc, mang lại vẻ nữ tính và thanh lịch.",
+    "gender": "nu"
+  },
+  {
+    "id": "56",
+    "name": "Khăn Choàng Nữ Premium Silk",
+    "price": 2290000,
+    "image": "image/phukien/khan.avif",
+    "category": "phukien",
+    "description": "Khăn choàng nữ chất liệu lụa cao cấp, mềm mại và thoáng khí. Thiết kế tinh tế, dễ phối đồ, thích hợp dùng trong mùa thu đông hoặc làm phụ kiện sang trọng cho sự kiện.",
+    "gender": "nu"
+  },
+  {
+    "id": "57",
+    "name": "Khăn Choàng Nam Classic Wool",
+    "price": 2790000,
+    "image": "image/phukien/khan2.avif",
+    "category": "phukien",
+    "description": "Khăn choàng nam từ len cao cấp, giữ ấm hiệu quả trong mùa đông. Kiểu dáng cổ điển, dễ phối cùng áo khoác, mang lại sự thanh lịch, sang trọng và đầy nam tính cho phái mạnh.",
+    "gender": "nam"
+  },
+  {
+    "id": "58",
+    "name": "Kính Mát Unisex Urban Style",
+    "price": 1999000,
+    "image": "image/phukien/kinhnam.avif",
+    "category": "phukien",
+    "description": "Kính mát thiết kế hiện đại, phù hợp cho cả nam và nữ. Gọng nhẹ, tròng chống tia UV hiệu quả, giúp bảo vệ mắt và tạo phong cách thời trang năng động, cá tính.",
+    "gender": "unisex"
+  },
+  {
+    "id": "59",
+    "name": "Kính Mát Nữ Elegant Cat Eye",
+    "price": 2590000,
+    "image": "image/phukien/kinh.avif",
+    "category": "phukien",
+    "description": "Kính mát nữ kiểu dáng mắt mèo sang trọng, gọng chắc chắn. Tròng kính chống nắng, giảm lóa, phù hợp đi dạo phố hoặc đi biển, mang lại vẻ đẹp quyến rũ và hiện đại.",
+    "gender": "nu"
+  },
+  {
+    "id": "60",
+    "name": "Kính Mát Nam Classic Aviator",
+    "price": 3190000,
+    "image": "image/phukien/kinhnam1.avif",
+    "category": "phukien",
+    "description": "Kính mát nam phong cách phi công cổ điển, gọng kim loại chắc chắn. Tròng kính chống tia UV, phù hợp cho lái xe hoặc hoạt động ngoài trời, tạo phong cách mạnh mẽ và tự tin.",
+    "gender": "nam"
+  },
+  {
+    "id": "61",
+    "name": "Nón Nam Sport Cap",
+    "price": 1399000,
+    "image": "image/phukien/non.avif",
+    "category": "phukien",
+    "description": "Nón lưỡi trai nam phong cách thể thao, chất liệu cotton thoáng khí. Thiết kế đơn giản nhưng hiện đại, dễ kết hợp với nhiều trang phục, mang lại sự năng động và cá tính.",
+    "gender": "nam"
+  },
+  {
+    "id": "62",
+    "name": "Thắt Lưng Nam Premium Leather",
+    "price": 3590000,
+    "image": "image/phukien/thatlung.avif",
+    "category": "phukien",
+    "description": "Thắt lưng nam da thật cao cấp, mặt khóa kim loại sáng bóng. Kiểu dáng sang trọng, dễ phối hợp nhiều phong cách, mang lại sự lịch lãm và tự tin cho người đàn ông hiện đại.",
+    "gender": "nam"
+  },
+  {
+    "id": "63",
+    "name": "Cà Vạt Nam Elegant Tie",
+    "price": 1899000,
+    "image": "image/phukien/v2.avif",
+    "category": "phukien",
+    "description": "Cà vạt nam thiết kế thanh lịch, chất liệu vải cao cấp mềm mại. Kiểu dáng chuẩn form, dễ phối với vest hoặc sơ mi, mang lại sự sang trọng và chuyên nghiệp trong công việc.",
+    "gender": "nam"
+  },
+
+
+
+
+
+
+
+  {
+    "id": "64",
+    "name": "Đồng Hồ Nam Classic Leather",
+    "price": 4590000,
+    "image": "image/dhtrangsuc/dhnam.avif",
+    "category": "dongho",
+    "description": "Đồng hồ nam dây da cao cấp, mặt số tối giản nhưng sang trọng. Thiết kế tinh tế, phù hợp cho công sở và sự kiện, mang lại vẻ lịch lãm và phong cách mạnh mẽ cho phái mạnh.",
+    "gender": "nam"
+  },
+  {
+    "id": "65",
+    "name": "Đồng Hồ Nam Sport Chrono",
+    "price": 3190000,
+    "image": "image/dhtrangsuc/dhn1.avif",
+    "category": "dongho",
+    "description": "Đồng hồ nam thể thao với mặt số chronograph hiện đại. Dây cao su bền chắc, chống nước tốt, phù hợp cho các hoạt động ngoài trời, mang lại sự năng động và phong cách cá tính.",
+    "gender": "nam"
+  },
+  {
+    "id": "66",
+    "name": "Đồng Hồ Nữ Elegant Pearl",
+    "price": 2499000,
+    "image": "image/dhtrangsuc/dhn.avif",
+    "category": "dongho",
+    "description": "Đồng hồ nữ thiết kế tinh tế với mặt số khảm ngọc trai. Dây kim loại sáng bóng, kiểu dáng thanh mảnh, tôn lên sự duyên dáng và quyến rũ, thích hợp cho công việc và sự kiện.",
+    "gender": "nu"
+  },
+  {
+    "id": "67",
+    "name": "Đồng Hồ Unisex Premium Steel",
+    "price": 3890000,
+    "image": "image/dhtrangsuc/dhn2.avif",
+    "category": "dongho",
+    "description": "Đồng hồ unisex với dây thép không gỉ bền bỉ, mặt số tối giản hiện đại. Thiết kế phù hợp cho cả nam và nữ, mang lại sự sang trọng, trẻ trung và dễ phối hợp trang phục.",
+    "gender": "unisex"
+  },
+  {
+    "id": "68",
+    "name": "Đồng Hồ Unisex Urban Minimal",
+    "price": 1799000,
+    "image": "image/dhtrangsuc/hdn.avif",
+    "category": "dongho",
+    "description": "Đồng hồ unisex kiểu dáng tối giản, mặt số tròn thanh lịch. Dây vải canvas thoáng nhẹ, dễ sử dụng, phù hợp cho phong cách hằng ngày của cả nam và nữ, tiện lợi và hiện đại.",
+    "gender": "unisex"
+  },
+
+
+
+
+
+  {
+    "id": "69",
+    "name": "Nhẫn Nam Classic Silver",
+    "price": 1999000,
+    "image": "image/dhtrangsuc/nhannam1.avif",
+    "category": "trangsuc",
+    "description": "Nhẫn nam làm từ bạc cao cấp, thiết kế mạnh mẽ với chi tiết khắc tinh tế. Phù hợp cho phong cách lịch lãm và cá tính, dễ phối hợp cùng đồng hồ hoặc trang phục công sở.",
+    "gender": "nam"
+  },
+  {
+    "id": "70",
+    "name": "Nhẫn Nữ Elegant Diamond",
+    "price": 4590000,
+    "image": "image/dhtrangsuc/nhannu.avif",
+    "category": "trangsuc",
+    "description": "Nhẫn nữ đính đá sang trọng, mặt cắt kim cương nhân tạo lấp lánh. Thiết kế tinh tế, tôn lên sự nữ tính và quyến rũ, lý tưởng cho các buổi tiệc, lễ kỷ niệm hoặc làm quà tặng.",
+    "gender": "nu"
+  },
+  {
+    "id": "71",
+    "name": "Hoa Tai Nữ Premium Pearl",
+    "price": 2499000,
+    "image": "image/dhtrangsuc/hoatai1.avif",
+    "category": "trangsuc",
+    "description": "Hoa tai nữ với thiết kế ngọc trai sang trọng, dễ phối hợp nhiều phong cách. Chất liệu bạc cao cấp, chống dị ứng, mang lại sự duyên dáng và quý phái cho phái đẹp hiện đại.",
+    "gender": "nu"
+  },
+  {
+    "id": "72",
+    "name": "Hoa Tai Nữ Elegant Crystal",
+    "price": 1799000,
+    "image": "image/dhtrangsuc/hoatai2.avif",
+    "category": "trangsuc",
+    "description": "Hoa tai nữ đính pha lê lấp lánh, thiết kế thanh mảnh và tinh tế. Phù hợp cho các sự kiện đặc biệt, mang đến sự sang trọng và quyến rũ, tôn lên vẻ đẹp rạng ngời cho người đeo.",
+    "gender": "nu"
+  },
+  {
+    "id": "73",
+    "name": "Vòng Cổ Nam Urban Steel",
+    "price": 3290000,
+    "image": "image/dhtrangsuc/vongnam1.avif",
+    "category": "trangsuc",
+    "description": "Vòng cổ nam bằng thép không gỉ phong cách urban, thiết kế mạnh mẽ. Độ bền cao, dễ kết hợp cùng nhiều loại trang phục, tạo phong cách cá tính và thời thượng cho phái mạnh.",
+    "gender": "nam"
+  },
+  {
+    "id": "74",
+    "name": "Vòng Cổ Nữ Luxury Gold",
+    "price": 4990000,
+    "image": "image/dhtrangsuc/vongnu1.avif",
+    "category": "trangsuc",
+    "description": "Vòng cổ nữ mạ vàng cao cấp, thiết kế sang trọng với chi tiết tinh xảo. Mang lại sự quý phái, nổi bật trong các buổi tiệc tối, dễ phối với đầm dạ hội và trang phục thanh lịch.",
+    "gender": "nu"
+  },
+  {
+    "id": "75",
+    "name": "Vòng Cổ Nữ Elegant Heart",
+    "price": 2590000,
+    "image": "image/dhtrangsuc/vongnu2.avif",
+    "category": "trangsuc",
+    "description": "Vòng cổ nữ đính mặt hình trái tim tinh tế, chất liệu bạc sáng bóng. Kiểu dáng hiện đại, mang đến sự nữ tính và nhẹ nhàng, lý tưởng làm quà tặng hoặc phụ kiện hằng ngày.",
+    "gender": "nu"
   }
 
 
