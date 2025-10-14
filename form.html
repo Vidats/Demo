@@ -11,30 +11,27 @@
   <!-- Favicon -->
   <link rel="icon" type="logo.png" href="image/logo.png">
   <style>
-    :root {
-      --primary-color: #000000;
-      --secondary-color: #333333;
-      --accent-color: #000000;
-      /* Màu Xanh dương, để khớp với nút Đăng Ký trong ảnh của bạn */
-
-      /* Nền trắng cho form */
-      --heading-font: 'Playfair Display', serif;
-      --body-font: 'Roboto', sans-serif;
-    }
-
-    /* ==== NỀN VÀ BỐ CỤC TRUNG TÂM ==== */
-    .auth-wrapper {
-      display: flex;
+   :root {
+            --primary-color: #000000;
+            --secondary-color: #6c757d;
+            --border-color: #ced4da;
+            --main-font: 'Arial', sans-serif;
+            --error-color: #dc3545;
+        }
+ 
+.auth-wrapper {
+    display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       background-color: var(--light-bg-color);
       padding: 30px;
       margin-top: 0px;
-    }
+}
 
-    /* ==== CONTAINER ==== */
-    .auth-container {
+
+
+        .auth-container {
       width: 100%;
       max-width: 1000px;
       /* Tăng kích thước tối đa */
@@ -42,7 +39,7 @@
       background: var(--dark-bg-color);
       border-radius: 10px;
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-      text-align: center;
+      
       border: 1px solid #e5e5e5;
       transition: all 0.3s ease;
     }
@@ -50,234 +47,212 @@
     .auth-container:hover {
       transform: none;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- SWITCHER STYLE --- */
+        .auth-switcher {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .switcher-btn {
+            flex-grow: 1;
+            padding: 15px 0;
+            border: none;
+            background: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            transition: color 0.3s, border-bottom 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .switcher-btn.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* --- FORM SECTION --- */
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+        form {
+            padding: 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+        .col-md-6 {
+            width: 50%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #343a40;
+        }
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* --- PASSWORD & DATE INPUT --- */
+        .password-input-group,
+        .date-input-group {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        /* --- CHECKBOX & LINK --- */
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px !important;
+        }
+        .form-check-input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        .forgot-password-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-left: auto;
+        }
+      
+        /* --- SUBMIT BUTTON --- */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: opacity 0.3s;
+        }
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* --- SOCIAL LOGIN STYLE (Màu Đen) --- */
+        .social-login p {
+            text-align: center;
+            margin: 25px 0 20px 0;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+        .social-icons {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .social-icons a {
+            color: #000000;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            margin: 0 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* --- ERROR MESSAGE STYLE --- */
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.85rem;
+            margin-top: -15px; /* Kéo lên sát input */
+            margin-bottom: 15px;
+            display: block;
+            height: 0.85rem; /* Giữ khoảng trắng cho lỗi */
+        }
+        /* --- CSS TỐI ƯU CHO MOBILE (Media Query) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Reset .auth-wrapper: Loại bỏ padding/margin thừa trên mobile */
+    .auth-wrapper {
+        padding: 10px; /* Giảm padding trên mobile */
+        min-height: auto; /* Quan trọng: Xóa min-height để form không bị cố định full màn hình */
+        align-items: flex-start; /* Form sẽ căn chỉnh lên trên, không bị trôi */
+        display: block; /* Tùy chọn: Đôi khi display:block giúp tránh lỗi Flexbox trên mobile */
     }
 
-    /* ==== LOGO & HEADINGS/LINKS ==== */
-    .logo {
-      font-family: var(--heading-font);
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 25px;
-      color: var(--primary-color);
-      letter-spacing: 2px;
+    /* 2. Reset .auth-container: Giảm padding bên trong */
+    .auth-container {
+        padding: 25px 20px;
+        box-shadow: none; /* Tùy chọn: Xóa bóng để đơn giản hóa trên mobile */
+        border: none;
     }
 
-    .login-link,
-    .forgot-password-link {
-      color: var(--accent-color);
-      font-weight: 500;
-      text-decoration: none;
-      transition: color 0.2s;
+    /* 3. Đảm bảo form trở thành 1 cột */
+    .row {
+        margin: 0; /* Xóa margin âm */
     }
-
-    .login-link:hover,
-    .forgot-password-link:hover {
-      color: var(--primary-color);
+    .col-md-6 {
+        width: 100%; /* Đảm bảo 2 cột thành 1 cột */
+        padding: 0; /* Xóa padding ngang */
     }
-
-
-    /* ==== SWITCHER (Đăng nhập / Đăng ký) ==== */
-    .auth-switcher {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 35px;
-      border-bottom: 2px solid #ddd;
-    }
-
-    .switcher-btn {
-      flex: 1;
-      padding: 14px 0;
-      background: none;
-      border: none;
-      font-family: var(--body-font);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--secondary-color);
-      cursor: pointer;
-      position: relative;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: color 0.3s ease;
-    }
-
-    .switcher-btn:hover {
-      color: var(--primary-color);
-    }
-
-    .switcher-btn::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: transparent;
-      transition: background-color 0.3s ease;
-    }
-
-    .switcher-btn.active {
-      color: var(--primary-color);
-      font-weight: 600;
-    }
-
-    .switcher-btn.active::after {
-      background-color: var(--accent-color);
-    }
-
-    /* ==== FORM & FORM-GROUP (Bố cục 2 cột) ==== */
-    .form-section {
-      display: none;
-      animation: fadeIn 0.4s ease;
-    }
-
-    .form-section.active {
-      display: block;
-    }
-
-    .form-section .row {
-      margin-left: -8px;
-      margin-right: -8px;
-    }
-
-    .form-section .col-md-6 {
-      padding-left: 8px;
-      padding-right: 8px;
-    }
-
     .form-group {
-      margin-bottom: 22px;
-      text-align: left;
+        margin-bottom: 15px; /* Giảm khoảng cách giữa các trường */
     }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 500;
-      color: var(--primary-color);
-      font-size: 0.95rem;
-    }
-
-    /* Base style for inputs and select */
-    .form-group input,
-    .form-group select,
-    .form-control {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid #d8d8d8;
-      border-radius: 6px;
-      font-family: var(--body-font);
-      font-size: 1rem;
-      color: var(--primary-color);
-      background-color: var(--dark-bg-color);
-      transition: all 0.3s ease;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-control:focus {
-      border-color: var(--accent-color);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-    }
-
-    /* Custom style cho Select "Tiêu đề" */
-    .form-group select {
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      background-size: 10px;
-      padding-right: 30px;
-      color: var(--secondary-color);
-    }
-
-    /* Input groups (Password/Date) và Icon */
-    .password-input-group,
-    .date-input-group {
-      position: relative;
-      width: 100%;
-    }
-
-    .password-input-group input,
-    .date-input-group input {
-      padding-right: 40px;
-      /* Tạo khoảng trống cho icon */
-    }
-
-    .password-toggle,
-    .calendar-icon {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: var(--secondary-color);
-      font-size: 1.05rem;
-      transition: color 0.2s;
-    }
-
-    .password-toggle:hover,
-    .calendar-icon:hover {
-      color: var(--primary-color);
-    }
-
-    /* Checkbox Styling */
-    .form-check-input:checked {
-      background-color: var(--accent-color);
-      border-color: var(--accent-color);
-    }
-
-    .form-check-input {
-      border-radius: 4px;
-      /* Hộp vuông như trong ảnh */
-      border: 1px solid #aaa;
-    }
-
-    .form-check-label a {
-      color: var(--accent-color);
-    }
-
-
-    /* ==== NÚT SUBMIT ==== */
-    .submit-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .submit-btn:hover {
-      background-color: var(--secondary-color) !important;
-      transform: none;
-    }
-
-    /* ==== RESPONSIVE ==== */
-    @media (max-width: 768px) {
-      .auth-container {
-        padding: 30px 20px;
-        max-width: 100%;
-      }
-
-      /* Các cột sẽ xếp chồng lên nhau */
-      .form-section .col-md-6 {
-        width: 100%;
-        flex: 0 0 100%;
-      }
-
-      .switcher-btn {
+    
+    /* 4. Điều chỉnh nút chuyển đổi tab */
+    .switcher-btn {
         font-size: 0.9rem;
-        padding: 12px 5px;
-      }
+        padding: 12px 0;
     }
-  </style>
+    
+    /* 5. Điều chỉnh các liên kết */
+    .form-check {
+        flex-direction: column; /* Đặt checkbox và label xuống dòng nếu quá dài */
+        align-items: flex-start;
+    }
+    .forgot-password-link {
+        margin-left: 0;
+        margin-top: 5px;
+        align-self: flex-end; /* Đẩy link quên mật khẩu sang phải */
+    }
+}
+    </style>
 </head>
 
 <body>
@@ -322,17 +297,16 @@
     </div>
     <div class="menu-content">
       <ul class="menu-list">
-        <li class="menu-category">
-          <span class="category-title"> Tất Cả Sản phẩm</span>
-          <a href="sanpham.html?gender=nam" class="category-title">Đồ Nam</a>
-          <a href="sanpham.html?gender=nu" class="category-title">Đồ Nữ</a>
-          <span class="category-title">Đồng hồ</span>
-          <span class="category-title">Giày</span>
-          <span class="category-title">Túi xách và ví</span>
-          <span class="category-title">Trang sức</span>
-          <span class="category-title">Các phụ kiện du lịch</span>
-          <span class="category-title">Nước hoa và Làm đẹp</span>
-
+          <li class="menu-category">
+          <a href="sanpham.html" class="category-title">Tất cả sản phẩm</a>
+          <a href="sanpham.html?gender=nam&category=ao" class="category-title">Đồ Nam</a>
+          <a href="sanpham.html?gender=nu&category=ao" class="category-title">Đồ Nữ</a>
+          <a href="sanpham.html?category=dongho" class="category-title">Đồng Hồ</a>
+          <a href="sanpham.html?category=giay" class="category-title">Giày</a>
+          <a href="sanpham.html?category=tui&category=vi" class="category-title">Túi Xách Và Ví</a>
+          <a href="sanpham.html?category=trangsuc" class="category-title">Trang Sức</a>
+          <a href="sanpham.html?category=phukien" class="category-title">Phụ Kiện Du Lịch</a>
+          <a href="sanpham.html?category=mypham" class="category-title">Nước Hoa Và Làm Đẹp</a>
         </li>
 
       </ul>
@@ -364,117 +338,121 @@
 
 
   <div class="auth-wrapper">
-
-    <div class="auth-container">
-      <div class="auth-switcher">
-        <button class="switcher-btn active" data-form="login-new">ĐĂNG NHẬP</button>
-        <button class="switcher-btn" data-form="register-new">TẠO TÀI KHOẢN</button>
-      </div>
-
-      <div id="login-new-form" class="form-section active">
-        <h2 style="margin-bottom: 20px; font-size: 1.5rem; font-weight: 500;">Đăng Nhập</h2>
-        <form>
-          <div class="form-group">
-            <label for="login-new-email">Email*</label>
-            <input type="email" id="login-new-email" name="email" placeholder="Nhập địa chỉ email của bạn" required />
-          </div>
-          <div class="form-group">
-            <label for="login-new-password">Mật khẩu*</label>
-            <div class="password-input-group">
-              <input type="password" id="login-new-password" name="password" placeholder="Nhập mật khẩu" required />
-              <i class="fa-regular fa-eye password-toggle" data-target="login-new-password"></i>
+        <div class="auth-container">
+            <div class="auth-switcher">
+                <button class="switcher-btn active" data-form="login-new">ĐĂNG NHẬP</button>
+                <button class="switcher-btn" data-form="register-new">TẠO TÀI KHOẢN</button>
             </div>
-          </div>
-          <div class="form-check text-start mb-4">
-            <input class="form-check-input" type="checkbox" id="remember-me">
-            <label class="form-check-label" for="remember-me" style="font-weight: normal; font-size: 0.95rem;">
-              Ghi nhớ đăng nhập
-            </label>
-            <a href="#" class="float-end forgot-password-link">Quên mật khẩu?</a>
-          </div>
-          <button type="submit" class="submit-btn" style="background-color: var(--primary-color);">ĐĂNG NHẬP</button>
-        </form>
-        <div class="social-login">
-          <p>— Hoặc đăng nhập bằng —</p>
-          <div class="social-icons">
-            <a href="#" class="google" aria-label="Sign in with Google"><i class="fab fa-google"></i></a>
-            <a href="#" class="facebook" aria-label="Sign in with Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="apple" aria-label="Sign in with Apple"><i class="fab fa-apple"></i></a>
-          </div>
+
+            <div id="login-new-form" class="form-section active">
+                <h2 style="margin-bottom: 20px; font-size: 1.5rem; font-weight: 500; text-align: center;">Đăng Nhập</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="login-new-email">Email*</label>
+                        <input type="email" id="login-new-email" name="email" placeholder="Nhập địa chỉ email của bạn" required />
+                        <span class="error-message" id="login-email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-new-password">Mật khẩu*</label>
+                        <div class="password-input-group">
+                            <input type="password" id="login-new-password" name="password" placeholder="Nhập mật khẩu" required />
+                            <i class="fa-regular fa-eye password-toggle" data-target="login-new-password"></i>
+                        </div>
+                        <span class="error-message" id="login-password-error"></span>
+                    </div>
+                    <div class="form-check text-start mb-4">
+                        <input class="form-check-input" type="checkbox" id="remember-me">
+                        <label class="form-check-label" for="remember-me" style="font-weight: normal; font-size: 0.95rem;">
+                            Ghi nhớ đăng nhập
+                        </label>
+                        <a href="#" class="float-end forgot-password-link">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="submit-btn" style="background-color: var(--primary-color);">ĐĂNG NHẬP</button>
+                </form>
+                <div class="social-login">
+                    <p>— Hoặc đăng nhập bằng —</p>
+                    <div class="social-icons">
+                        <a href="#" class="google" aria-label="Sign in with Google"><i class="fab fa-google"></i></a>
+                        <a href="#" class="facebook" aria-label="Sign in with Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="apple" aria-label="Sign in with Apple"><i class="fab fa-apple"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="register-new-form" class="form-section">
+                <h2 style="margin-bottom: 25px; font-size: 1.5rem; font-weight: 600; text-align: center;">Tạo tài khoản</h2>
+                <p style="font-size: 0.95rem; margin-bottom: 25px; color: var(--secondary-color); text-align: center;">Tạo tài khoản để tận hưởng trải nghiệm được cá nhân hóa.</p>
+
+                <form id="registerForm">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="register-email">Email*</label>
+                            <input type="email" id="register-email" name="email" required />
+                            <span class="error-message" id="reg-email-error"></span>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="register-confirm-email">Email xác thực*</label>
+                            <input type="email" id="register-confirm-email" name="confirm_email" required />
+                            <span class="error-message" id="reg-confirm-email-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="register-title">Tiêu đề*</label>
+                            <select class="form-control" id="register-title" name="title" required>
+                                <option value="" disabled selected>Chọn danh xưng</option>
+                                <option value="mr">Ông (Mr.)</option>
+                                <option value="mrs">Bà (Mrs.)</option>
+                                <option value="ms">Cô (Ms.)</option>
+                            </select>
+                            <span class="error-message" id="reg-title-error"></span>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="register-full-name">Họ và Tên*</label>
+                            <input type="text" id="register-full-name" name="full_name" required />
+                            <span class="error-message" id="reg-name-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="register-password">Mật khẩu*</label>
+                            <div class="password-input-group">
+                                <input type="password" id="register-password" name="password" required />
+                                <i class="fa-regular fa-eye password-toggle" data-target="register-password"></i>
+                            </div>
+                            <span class="error-message" id="reg-password-error"></span>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="register-dob">Ngày sinh</label>
+                            <div class="date-input-group">
+                                <input type="date" id="register-dob" name="dob" placeholder="dd/mm/yyyy" />
+                                <i class=""></i>
+                            </div>
+                            <span class="error-message" id="reg-dob-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-check text-start mb-2">
+                        <input class="form-check-input" type="checkbox" id="email-subscribe">
+                        <label class="form-check-label" for="email-subscribe" style="font-weight: normal; font-size: 0.95rem; color:#000000">
+                            Đăng ký nhận thư điện tử từ V & Đ
+                        </label>
+                    </div>
+                    <div class="form-check text-start mb-4">
+                        <input class="form-check-input" type="checkbox" id="privacy-policy" required>
+                        <label class="form-check-label" for="privacy-policy" style="font-weight: normal; font-size: 0.95rem; color:#000000">
+                            Tôi đã đọc và đồng ý với <a href="#" style=" font-weight: 500;">Chính sách quyền riêng tư</a>. *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" style="background-color: var(--primary-color);">ĐĂNG KÝ</button>
+                </form>
+            </div>
         </div>
-      </div>
-
-      <div id="register-new-form" class="form-section">
-        <h2 style="margin-bottom: 25px; font-size: 1.5rem; font-weight: 600;">Tạo tài khoản</h2>
-        <p style="font-size: 0.95rem; margin-bottom: 25px; color: var(--secondary-color);">Tạo tài khoản để tận hưởng
-          trải nghiệm được cá nhân hóa. 
-
-        <form>
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <label for="register-email">Email*</label>
-              <input type="email" id="register-email" name="email" required />
-            </div>
-            <div class="col-md-6 form-group">
-              <label for="register-confirm-email">Email xác thực*</label>
-              <input type="email" id="register-confirm-email" name="confirm_email" required />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <label for="register-title">Tiêu đề*</label>
-              <select class="form-control" id="register-title" name="title" required>
-                <option value="" disabled selected>Chọn danh xưng</option>
-                <option value="mr">Ông (Mr.)</option>
-                <option value="mrs">Bà (Mrs.)</option>
-                <option value="ms">Cô (Ms.)</option>
-              </select>
-            </div>
-            <div class="col-md-6 form-group">
-              <label for="register-full-name">Họ và Tên*</label>
-              <input type="text" id="register-full-name" name="full_name" required />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <label for="register-password">Mật khẩu*</label>
-              <div class="password-input-group">
-                <input type="password" id="register-password" name="password" required />
-                <i class="fa-regular fa-eye password-toggle" data-target="register-password"></i>
-              </div>
-            </div>
-            <div class="col-md-6 form-group">
-              <label for="register-dob">Ngày sinh</label>
-              <div class="date-input-group">
-                <input type="text" id="register-dob" name="dob" placeholder="dd/mm/yyyy" />
-                <i class="fa-regular fa-calendar-alt calendar-icon"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-check text-start mb-2">
-            <input class="form-check-input" type="checkbox" id="email-subscribe">
-            <label class="form-check-label" for="email-subscribe" style="font-weight: normal; font-size: 0.95rem; color:#000000">
-              Đăng ký nhận thư điện tử từ V & Đ
-            </label>
-          </div>
-          <div class="form-check text-start mb-4">
-            <input class="form-check-input" type="checkbox" id="privacy-policy" required>
-            <label class="form-check-label" for="privacy-policy" style="font-weight: normal; font-size: 0.95rem; color:#000000">
-              Tôi đã đọc và đồng ý với <a href="#" style=" font-weight: 500;">Chính sách
-                quyền riêng tư</a>. *
-            </label>
-          </div>
-
-          <button type="submit" class="submit-btn"
-            style="background-color: #000000; /* Changed to a standard blue for the 'ĐĂNG KÝ' button to match the screenshot, but you can change this */">ĐĂNG
-            KÝ</button>
-        </form>
-      </div>
     </div>
-  </div>
+
   <footer class="footer">
     <div class="container">
       <div class="row footer-columns">
@@ -541,8 +519,7 @@
           <strong>V & Đ</strong>
         </div>
         <div class="right">
-          <a href="#">Sơ đồ trang web</a> |
-          <a href="#">Pháp lý & Quyền riêng tư</a>
+          <a href="pl.html">Chính sách | Pháp lý & Quyền riêng tư</a>
         </div>
       </div>
     </div>
@@ -550,24 +527,139 @@
 
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const switcherBtns = document.querySelectorAll('.switcher-btn');
+            const formSections = document.querySelectorAll('.form-section');
+            const passwordToggles = document.querySelectorAll('.password-toggle');
 
-  <script>
-    const switchBtns = document.querySelectorAll('.switcher-btn');
-    const formSections = document.querySelectorAll('.form-section');
+            // --- 1. CHỨC NĂNG CHUYỂN ĐỔI TAB ---
+            switcherBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const targetFormId = this.getAttribute('data-form') + '-form';
 
-    switchBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        // Xóa class 'active' khỏi tất cả các nút và form
-        switchBtns.forEach((b) => b.classList.remove('active'));
-        formSections.forEach((f) => f.classList.remove('active'));
+                    // Cập nhật trạng thái nút
+                    switcherBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
 
-        // Thêm class 'active' vào nút và form được click
-        btn.classList.add('active');
-        const targetForm = document.getElementById(btn.dataset.form + '-form');
-        targetForm.classList.add('active');
-      });
-    });
-  </script>
+                    // Hiển thị form mục tiêu
+                    formSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetFormId) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // --- 2. CHỨC NĂNG ẨN/HIỆN MẬT KHẨU ---
+            passwordToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetInput = document.getElementById(targetId);
+
+                    if (targetInput.type === 'password') {
+                        targetInput.type = 'text';
+                        this.classList.replace('fa-eye', 'fa-eye-slash');
+                    } else {
+                        targetInput.type = 'password';
+                        this.classList.replace('fa-eye-slash', 'fa-eye');
+                    }
+                });
+            });
+
+            // --- 3. KIỂM TRA ĐIỀU KIỆN ĐĂNG NHẬP (LOGGING) ---
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Ngăn form submit thực tế
+                
+                // Ở đây, bạn sẽ gọi API xác thực
+                const email = document.getElementById('login-new-email').value;
+                
+                // Giả định đăng nhập thành công sau khi kiểm tra phía server
+                console.log(`Đăng nhập thành công! Email: ${email}`);
+
+                // Xóa form hoặc chuyển hướng người dùng (chỉ là giả định)
+                alert(`Đăng nhập thành công với email: ${email}`);
+                loginForm.reset(); 
+            });
+
+            // --- 4. KIỂM TRA ĐIỀU KIỆN ĐĂNG KÝ (RÀNG BUỘC) ---
+
+            // Hàm kiểm tra tuổi
+            function checkAge(dateOfBirth) {
+                if (!dateOfBirth) return true; // Bỏ qua nếu không bắt buộc nhập ngày sinh
+                const dob = new Date(dateOfBirth);
+                const today = new Date();
+                const age = today.getFullYear() - dob.getFullYear();
+                const monthDiff = today.getMonth() - dob.getMonth();
+                const dayDiff = today.getDate() - dob.getDate();
+                
+                // Giảm tuổi nếu chưa tới sinh nhật
+                if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                    return age - 1 >= 18;
+                }
+                return age >= 18;
+            }
+
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Ngăn form submit thực tế
+
+                // Lấy giá trị từ các trường
+                const email = document.getElementById('register-email').value;
+                const confirmEmail = document.getElementById('register-confirm-email').value;
+                const dob = document.getElementById('register-dob').value;
+                const policyChecked = document.getElementById('privacy-policy').checked;
+                
+                // Lấy các thẻ báo lỗi
+                const confirmEmailError = document.getElementById('reg-confirm-email-error');
+                const dobError = document.getElementById('reg-dob-error');
+
+                let isValid = true;
+
+                // Xóa lỗi cũ
+                confirmEmailError.textContent = '';
+                dobError.textContent = '';
+
+                // A. Ràng buộc: Email xác nhận phải giống email
+                if (email !== confirmEmail) {
+                    confirmEmailError.textContent = 'Email xác nhận không khớp.';
+                    isValid = false;
+                }
+                
+                // B. Ràng buộc: Tuổi phải từ 18 trở lên (nếu có nhập)
+                if (dob && !checkAge(dob)) {
+                    dobError.textContent = 'Bạn phải đủ 18 tuổi trở lên để đăng ký.';
+                    isValid = false;
+                }
+
+                // C. Ràng buộc: Đồng ý chính sách (HTML already has 'required', but good practice to double check)
+                if (!policyChecked) {
+                    // Mặc dù trình duyệt sẽ xử lý, chúng ta giữ logic này.
+                    // alert("Bạn phải đồng ý với Chính sách quyền riêng tư.");
+                    isValid = false;
+                }
+                
+                // D. Xử lý Đăng ký thành công
+                if (isValid) {
+                    // Ở đây, bạn sẽ gửi dữ liệu đến API
+                    console.log('--- Dữ liệu Đăng ký Hợp lệ ---');
+                    console.log(`Email: ${email}`);
+                    console.log(`Ngày sinh: ${dob || 'Chưa cung cấp'}`);
+                    console.log('ĐĂNG KÝ THÀNH CÔNG!');
+                    
+                    // Giả định thành công và thông báo
+                    alert('Đăng ký tài khoản thành công! Vui lòng kiểm tra email.');
+                    registerForm.reset();
+                }
+            });
+        });
+    </script>
+
+
+
+
   <script src="js.js"></script>
 </body>
 

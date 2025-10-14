@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V & Đ</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="wed.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="logo.png" href="image/logo.png" />
+    <style>
+   
+      
+        .containerbody {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        .main-header {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+            color: #111;
+        }
+        .section-title {
+            font-size: 1.7em;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            color: #000;
+        }
+        h2.section-heading, h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        .privacy-policy p, .privacy-policy ul {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+        .privacy-policy li {
+            margin-bottom: 10px;
+        }
+        .privacy-policy strong {
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-left">
+      <div class="menu" onclick="toggleMenu()">
+        <img src="image/menu.png" alt="Menu Icon" />
+      </div>
+      <div class="search-box">
+        <form action="sanpham.html" method="get">
+          <img src="image/timkiem.png" alt="Search Icon" class="search-icon" onclick="this.closest('form').submit()" />
+          <input class="form-control search-input" name="q" type="search" placeholder="Tìm sản phẩm..."
+            aria-label="Search" style="display: none" />
+        </form>
+      </div>
+    </div>
+    <a href="wed.html">
+      <div class="banner">
+        <h1>V & Đ</h1>
+      </div>
+    </a>
+    <div class="header-right">
+      <a href="form.html" onclick="openLoginForm()" class="user-link">
+        <div class="user-icon">
+          <img src="image/login1.png" alt="User Icon" />
+        </div>
+      </a>
+      <a href="cart.html" class="shoppingcart">
+        <img src="image/shoppingcart.png" alt="Shopping Cart" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Sliding Menu -->
+  <div class="sliding-menu" id="slidingMenu">
+    <div class="menu-header">
+      <h3>DANH MỤC SẢN PHẨM</h3>
+      <button onclick="toggleMenu()" class="close-btn">&times;</button>
+    </div>
+    <div class="menu-content">
+      <ul class="menu-list">
+        <li class="menu-category">
+          <a href="sanpham.html" class="category-title">Tất cả sản phẩm</a>
+          <a href="sanpham.html?gender=nam&category=ao" class="category-title">Đồ Nam</a>
+          <a href="sanpham.html?gender=nu&category=ao" class="category-title">Đồ Nữ</a>
+          <a href="sanpham.html?category=dongho" class="category-title">Đồng Hồ</a>
+          <a href="sanpham.html?category=giay" class="category-title">Giày</a>
+          <a href="sanpham.html?category=tui&category=vi" class="category-title">Túi Xách Và Ví</a>
+          <a href="sanpham.html?category=trangsuc" class="category-title">Trang Sức</a>
+          <a href="sanpham.html?category=phukien" class="category-title">Phụ Kiện Du Lịch</a>
+          <a href="sanpham.html?category=mypham" class="category-title">Nước Hoa Và Làm Đẹp</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar bg-light border-bottom">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="wed.html">Trang Chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sanpham.html">Sản Phẩm </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dichvu.html">Dịch Vụ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="containerbody">
+        <header>
+            <h1 class="main-header">THÔNG BÁO PHÁP LÝ VÀ CHÍNH SÁCH QUYỀN RIÊNG TƯ</h1>
+        </header>
+
+        <section class="privacy-policy">
+            <h2 class="section-title">CHÍNH SÁCH VỀ QUYỀN RIÊNG TƯ</h2>
+
+            <p>
+                Mục đích của Chính sách về quyền riêng tư này ("Chính sách") là mô tả cách thức 
+                <strong>Công ty TNHH V & Đ Việt Nam ("V & Đ")</strong>, một công ty Việt Nam có trụ sở đăng ký tại 
+                (Địa chỉ mới, ví dụ: Phòng 3, tầng 1, tòa nhà V & Đ Quốc tế, số 17, phố Ngô Quyền, phường Tràng Tiền, quận Hoàn Kiếm, thành phố Hà Nội, Việt Nam), thu thập, sử dụng, tiết lộ hay nói cách khác, xử lý thông tin cá nhân liên quan đến khách hàng và khách hàng tiềm năng ("Quý khách hàng" hoặc "của Quý khách hàng") để cung cấp dịch vụ cho Quý khách hàng được tốt nhất. 
+                V & Đ là
+            </p>
+
+            <p>
+                <strong>V & Đ Malletier và/hoặc Công ty TNHH V & Đ Việt Nam</strong> (sau đây gọi là "Chúng tôi" hoặc "của Chúng tôi") thu thập, lưu trữ, xử lý, sử dụng và tiết lộ thông tin cá nhân của Quý khách hàng liên quan đến hoạt động Quý khách hàng truy cập vào trang web, ứng dụng của V & Đ, hoạt động sử dụng các sản phẩm thông minh của Chúng tôi (nếu có), hoặc khi Quý khách hàng ghé thăm các cửa hàng hay truy cập vào các trang mạng xã hội của Chúng tôi, tại khu vực tài phán nơi Quý khách hàng cư trú.
+            </p>
+        
+            <hr>
+            
+            <h2 class="section-heading">1. CHÚNG TÔI THU THẬP NHỮNG LOẠI THÔNG TIN CÁ NHÂN NÀO?</h2>
+
+            <p>
+                Trong phạm vi các mục đích được mô tả trong Chính sách này, V & Đ, tự mình hoặc thông qua các bên liên kết hoặc bên xử lý của chúng tôi, có thể thu thập các loại thông tin cá nhân sau:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Thông tin nhận dạng và thông tin liên hệ</strong> (chẳng hạn như tên, địa chỉ, số điện thoại hoặc địa chỉ email) mà Quý khách hàng sẵn lòng cung cấp trong trường hợp như: khi đăng ký tài khoản trực tuyến hoặc khi điền vào thẻ thông tin khách hàng tại cửa hàng hoặc khi đăng ký nhận thông tin tiếp thị từ chúng tôi, tham gia sự kiện, tiến hành mua hàng hoặc thông tin giấy tờ tùy thân cần thiết khi Quý khách hàng yêu cầu dịch vụ “đặt hàng trực tuyến và đến lấy tại cửa hàng” (click and collect).
+                </li>
+                <li>
+                    <strong>Thông tin thanh toán</strong>: chẳng hạn như thông tin thẻ tín dụng, số tài khoản ngân hàng hoặc các thông tin thanh toán khác mà Quý khách hàng phải cung cấp để nhận sản phẩm hoặc dịch vụ đã đặt hàng từ Chúng tôi.
+                </li>
+                <li>
+                    <strong>Thông tin nhân khẩu</strong> như giới tính và ngày sinh của Quý khách hàng.
+                </li>
+                <li>
+                    <strong>Hình ảnh</strong> của Quý khách hàng khi ghé thăm các cửa hàng của Chúng tôi (được ghi nhận từ hệ thống camera giám sát an ninh) hoặc <strong>giọng nói</strong> của Quý khách hàng khi gọi đến trung tâm Dịch vụ khách hàng của V & Đ (vì cuộc gọi của Quý khách hàng có thể được ghi âm).
+                </li>
+                <li>
+                    <strong>Sở thích và mối quan tâm</strong> mà Quý khách hàng chọn tiết lộ trong quá trình liên hệ hoặc tiếp xúc với các nhân viên tư vấn khách hàng của Chúng tôi. Thông tin này có thể bao gồm sở thích của Quý khách hàng về bộ sưu tập của Chúng tôi hoặc các thương hiệu sang trọng khác, số đo của Quý khách hàng, phong cách sống hay thông tin cơ bản về gia đình của Quý khách hàng.
+                </li>
+                <li>
+                    <strong>Thông tin, có thể bao gồm thông tin sức khỏe</strong>, liên quan đến tác dụng bất lợi có thể do mỹ phẩm của Chúng tôi gây ra.
+                </li>
+                <li>
+                    <strong>Thông tin Quý khách hàng gửi hoặc đăng ở không gian công cộng</strong>, trên các trang mạng xã hội hoặc trên trang web của Chúng tôi, chẳng hạn như thông tin đánh giá sản phẩm.
+                </li>
+                <li>
+                    <strong>Thông tin mua hàng</strong> của Quý khách hàng trên kênh trực tuyến hoặc tại cửa hàng. Thông tin này có thể bao gồm các sản phẩm và giá sản phẩm mà Quý khách hàng đã mua.
+                </li>
+                <li>
+                    Nếu Quý khách hàng sử dụng các trang web của Chúng tôi, Chúng tôi có thể thu thập thông tin về <strong>trình duyệt và hành vi duyệt web</strong> của Quý khách hàng.
+                </li>
+                <li>
+                    Nếu sử dụng ứng dụng di động của Chúng tôi, Chúng tôi có thể thu thập <strong>vị trí GPS</strong> của Quý khách hàng (khi đã nhận được sự đồng ý của Quý khách hàng trong trường hợp cần thiết). Chúng tôi cũng có thể xem vị trí tải xuống ứng dụng và tần suất sử dụng ứng dụng của Quý khách hàng. Chúng tôi có thể thu thập thông tin về trình duyệt và hành vi duyệt web của Quý khách hàng.
+                </li>
+                <li>
+                    Nếu Quý khách hàng sử dụng các sản phẩm thông minh của Chúng tôi, Chúng tôi có thể thu thập thông tin liên quan đến hoạt động sử dụng sản phẩm đó của Quý khách hàng (chẳng hạn như tính năng sản phẩm mà Quý khách hàng sử dụng nhiều nhất hoặc thông tin về mức pin), cũng như thông tin vị trí địa lý, nếu cần, để cung cấp dịch vụ mà Quý khách hàng yêu cầu;
+                </li>
+            </ul>
+
+            <p>
+                Chúng tôi cũng có thể thu thập thông tin đăng trên các trang web hoặc các mạng xã hội của bên thứ ba về sản phẩm và dịch vụ của V & Đ, khi cần sử dụng cho các mục đích nêu trong đây.
+            </p>
+            <p>
+                <strong>Thông tin cá nhân của Quý khách hàng có thể được thu thập trực tiếp</strong> (ví dụ: khi Quý khách hàng tạo tài khoản trên một trong những trang web/ứng dụng của Chúng tôi, khi mua hàng hoặc bằng cách khác, trao đổi với nhân viên tư vấn khách hàng của Chúng tôi tại các cửa hàng hoặc với trung tâm Dịch vụ khách hàng của V & Đ); hoặc <strong>gián tiếp</strong> (ví dụ: khi sử dụng các công cụ thu thập thông tin như cookie của trình duyệt) hoặc <strong>từ các bên thứ ba</strong> (ví dụ: thông qua các nền tảng mạng xã hội).
+            </p>
+            <p>
+                Nếu Quý khách hàng chọn không gửi thông tin cá nhân khi được yêu cầu nhằm thực hiện hợp đồng hoặc khi pháp luật yêu cầu thì Quý khách hàng sẽ không nhận được sản phẩm hoặc dịch vụ mà Quý khách hàng đã đặt hàng hoặc nói cách khác, đăng ký trên các trang web, ứng dụng hoặc nền tảng truyền thông khác của Chúng tôi.
+            </p>
+            <p>
+                Một số loại thông tin cá nhân nêu trên có thể được coi là <strong>thông tin cá nhân nhạy cảm</strong>, vốn cần được bảo mật đặc biệt theo luật hiện hành, chẳng hạn như thông tin thanh toán, thông tin về sức khỏe, thông tin về vị trí thực tế của một cá nhân trong quá khứ hoặc hiện tại, v.v. Chúng tôi sẽ bảo mật những thông tin cá nhân có thể được xem là thông tin nhạy cảm của Quý khách hàng, theo đúng yêu cầu của pháp luật quốc gia và chỉ sử dụng thông tin đó cho các mục đích nêu trong Chính sách.
+            </p>
+
+            <hr>
+
+            <h2 class="section-heading">2. CHÚNG TÔI SỬ DỤNG THÔNG TIN CÁ NHÂN CỦA QUÝ KHÁCH HÀNG ĐỂ LÀM GÌ?</h2>
+            
+            <p>
+                Chúng tôi, tự mình hoặc thông qua các bên liên kết hoặc bên xử lý của chúng tôi, có thể thu thập hoặc sử dụng thông tin nêu trên cho các mục đích được nêu rõ tại thời điểm thu thập hoặc nêu trong Chính sách này như sau:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Để Chúng tôi có thể hiểu rõ hơn về sở thích và mối quan tâm của Quý khách hàng, cũng như hoạt động sử dụng các sản phẩm của Chúng tôi</strong>: Chúng tôi có thể sử dụng thông tin của Quý khách hàng để cải thiện trang web, ứng dụng và sản phẩm/dịch vụ của Chúng tôi. Chúng tôi có thể sử dụng thông tin của Quý khách hàng để tùy chỉnh trải nghiệm khi Quý khách hàng tương tác với Chúng tôi và điều chỉnh các hoạt động tiếp thị cho phù hợp với nhu cầu và mối quan tâm của Quý khách hàng để từ đó, Chúng tôi có thể phục vụ tốt hơn và đáp ứng được nhu cầu của Quý khách hàng.
+                </li>
+                <li>
+                    <strong>Để cung cấp sản phẩm và/hoặc dịch vụ của Chúng tôi theo yêu cầu của Quý khách hàng</strong>, xử lý đơn hàng, trả lời các yêu cầu hoặc câu hỏi, cũng như quản lý các đơn khiếu nại của Quý khách hàng. Ví dụ: Chúng tôi sử dụng thông tin để xử lý đơn hàng và giao hàng cho Quý khách hàng. Ví dụ khác là Chúng tôi có thể sử dụng thông tin để gửi thông tin Quý khách hàng yêu cầu, hoặc để trao đổi với Quý khách hàng những thông tin liên quan đến tài khoản hoặc về mối quan hệ giữa Quý khách hàng và V & Đ: Chúng tôi có thể liên hệ với Quý khách hàng để thông báo về các thay đổi đối với Trang web hoặc thông tin cập nhật dịch vụ. Chúng tôi cũng có thể liên hệ với Quý khách hàng để thu thập ý kiến phản hồi hoặc để trao đổi về các điều khoản của Chính sách này hoặc của trang web. Trong trường hợp đó, thông tin của Quý khách hàng sẽ được xử lý đúng theo hợp đồng mà Chúng tôi đã giao kết với Quý khách hàng.
+                </li>
+                <li>
+                    <strong>Vì lý do bảo đảm an ninh</strong>: Chúng tôi có thể sử dụng thông tin để bảo vệ công ty, khách hàng, cộng sự và các trang web hoặc ứng dụng của Chúng tôi nhằm chống lại hành vi gian lận, trộm cắp hoặc hành vi sai trái có thể ảnh hưởng đến hoạt động của Chúng tôi, cũng như để đảm bảo an ninh cho hoạt động trực tuyến và ngoại tuyến của Chúng tôi.
+                </li>
+                <li>
+                    Để quản lý tác dụng bất lợi có thể do mỹ phẩm của Chúng tôi gây ra, theo các nghĩa vụ pháp lý được quy định trong luật hiện hành, kể cả khi Chúng tôi đứng ở vai trò là nhà sản xuất mỹ phẩm.
+                </li>
+                <li>
+                    Nhằm mục đích <strong>chống hàng giả và chống lại các kênh bán sản phẩm V & Đ trái pháp luật</strong>, vi phạm các điều khoản và điều kiện chung của V & Đ về hoạt động bán hàng và mạng lưới kênh phân phối tuyển chọn của V & Đ (bằng cách giám sát đặc biệt gắt gao số lượng sản phẩm trong các giao dịch mua, hoặc tần suất mua sản phẩm). Điều này phục vụ lợi ích chính đáng của Chúng tôi nhằm bảo vệ Chúng tôi trước thực trạng buôn bán hàng giả trên mạng và duy trì mạng lưới kênh phân phối của Chúng tôi.
+                </li>
+                <li>
+                    <strong>Để phục vụ hoạt động tiếp thị</strong>: Chúng tôi có thể sử dụng thông tin của Quý khách hàng để liên hệ (khi đã nhận được sự đồng ý của Quý khách hàng, nếu cần) về các sản phẩm mới và các chương trình ưu đãi đặc biệt mà Chúng tôi nghĩ rằng sẽ có giá trị với Quý khách hàng.
+                </li>
+                <li>
+                    <strong>Để phục vụ hoạt động phân tích</strong>, Chúng tôi có thể sử dụng thông tin của Quý khách hàng để phân tích danh tiếng của V & Đ hoặc các sản phẩm của Chúng tôi trên Internet và để đánh giá hiệu quả của các chiến dịch hoặc sự kiện trực tuyến hoặc ngoại tuyến, duy trì hình ảnh thương hiệu của V & Đ và tối ưu hóa các chiến dịch tiếp thị của Chúng tôi.
+                </li>
+                <li>
+                    <strong>Nhằm mục đích khác</strong>: Chúng tôi sử dụng thông tin để lưu trữ hồ sơ giao dịch và các hồ sơ kinh doanh khác cho mục đích pháp lý, hành chính và kiểm toán. Chúng tôi cũng sử dụng thông tin để đáp ứng các yêu cầu về mặt pháp lý, bảo hiểm và quy trình, cũng như để đảm bảo tuân thủ các chính sách mà Chúng tôi đã thông báo cho Quý khách hàng.
+                </li>
+            </ul>
+            
+            <hr>
+
+            <h2 class="section-heading">3. CHÚNG TÔI CHIA SẺ THÔNG TIN CÁ NHÂN CỦA QUÝ KHÁCH HÀNG VỚI BÊN NÀO?</h2>
+            
+            <p>
+                Chúng tôi không tiết lộ hoặc chia sẻ thông tin cá nhân của Quý khách hàng mà Chúng tôi thu thập, ngoại trừ:
+            </p>
+
+            <ul>
+                <li>
+                    Với công ty mẹ và các công ty liên kết trực thuộc <strong>Tập đoàn V & Đ</strong>: chỉ những nhân viên được ủy quyền và cần biết thông tin mới được quyền truy cập vào thông tin, cho mục đích kiểm toán nội bộ, thanh toán hoặc quản trị và để cung cấp cho Quý khách hàng chất lượng dịch vụ và trải nghiệm đồng nhất trên toàn thế giới. Quý khách hàng có thể xem danh sách các cửa hàng V & Đ trên trang web của Chúng tôi;
+                </li>
+                <li>
+                    Với các nhà cung cấp dịch vụ và đại lý thực hiện dịch vụ thay mặt Chúng tôi. Ví dụ: Chúng tôi chia sẻ thông tin với các nhà cung cấp có gửi email cho Chúng tôi. Chúng tôi cũng có thể chia sẻ thông tin cá nhân với những nhà cung cấp dịch vụ giúp Chúng tôi vận hành trang web và những nhà cung cấp dịch vụ mà Chúng tôi chỉ định để giao sản phẩm cho Quý khách hàng.
+                </li>
+                <li>
+                    Với các đối tác kinh doanh mà Chúng tôi đã ký kết để thực hiện bất kỳ chức năng nào liên quan đến các mục đích nêu trên (khi được sự đồng ý của Quý khách hàng). Ví dụ: Chúng tôi sẽ chia sẻ thông tin với những bên thứ ba cùng tài trợ cho một sự kiện hoặc chương trình khuyến mãi với Chúng tôi.
+                </li>
+                <li>
+                    Với bất kỳ bên thứ ba nào nằm trong hoạt động tái cơ cấu hoặc tổ chức lại doanh nghiệp (bao gồm cả việc giải thể hoặc thanh lý). Điều này bao gồm trường hợp Chúng tôi sáp nhập toàn bộ hoặc một phần hoạt động kinh doanh hoặc tài sản của Chúng tôi được chuyển nhượng, chuyển giao hoặc bán.
+                </li>
+                <li>
+                    Khi luật pháp yêu cầu Chúng tôi phải chia sẻ thông tin hoặc khi đó là hành động cần thiết để tuân thủ luật hiện hành. Ví dụ: Chúng tôi có thể chia sẻ thông tin theo lệnh của tòa án.
+                </li>
+            </ul>
+
+            <hr>
+            
+            <h2 class="section-heading">4. CÔNG CỤ THU THẬP THÔNG TIN VÀ VIỆC SỬ DỤNG COOKIE</h2>
+            
+            <p>
+                Chúng tôi có thể thu thập những thông tin nhất định thông qua cookie, đèn hiệu web (web beacons) và các phương tiện tự động khác. Cookie là một tệp văn bản được lưu trong một khu vực riêng trên ổ cứng thiết bị, chẳng hạn như khi truy cập dịch vụ trực tuyến, đọc email, hay khi cài đặt hoặc sử dụng ứng dụng di động. Cookie cho phép bên gửi xác định thiết bị lưu trữ cookie đó trong thời hạn mà quyết định đồng ý còn hiệu lực (không quá 13 tháng).
+            </p>
+
+            <h3>Chúng tôi sử dụng loại cookie nào?</h3>
+            
+            <ul>
+                <li>
+                    Một số cookie có thể có chức năng thu thập thông tin. Chúng tôi dựa vào thông tin đó để hỗ trợ Quý khách hàng trong quá trình duyệt web, chẳng hạn như cung cấp tùy chọn ngôn ngữ ưa dùng, ghi nhớ thông tin đăng nhập, thông tin định dạng và thông tin liên hệ, lưu giỏ hàng hoặc danh sách sản phẩm Quý khách hàng muốn mua.
+                </li>
+                <li>
+                    Các cookie khác cũng thu thập thông tin về hành vi của Quý khách hàng bằng cách thu thập các liên kết giới thiệu (khách truy cập vào trang web Chúng tôi từ đâu, họ đã bấm vào biểu ngữ nào và biểu ngữ nào đưa họ đến trang web của Chúng tôi), các trang đã truy cập, số lần truy cập trang web. Những thông tin này giúp Chúng tôi cải thiện các trang web và ứng dụng của mình, hiểu rõ hơn về sản phẩm và dịch vụ Quý khách hàng mong muốn, đồng thời, gửi thông tin cập nhật dành riêng cho Quý khách hàng và/hoặc cung cấp nội dung phù hợp hơn với Quý khách hàng trên trang web hoặc ứng dụng của Chúng tôi.
+                </li>
+                <li>
+                    Chúng tôi cũng sử dụng cookie để phân tích trang web, nhằm đánh giá hoạt động của trang web và xác định những phần được truy cập nhiều nhất trên trang web, qua đó, giúp Chúng tôi cải thiện năng lực tiếp cận đối tượng của nội dung.
+                </li>
+                <li>
+                    Chúng tôi sử dụng cookie để đảm bảo an toàn cho các giao dịch/hoạt động mua hàng trực tuyến thông qua việc lấy thông tin nhận dạng thiết bị, vốn giúp Chúng tôi xác định được một số đặc điểm cụ thể của thiết bị được sử dụng để đặt hàng.
+                </li>
+                <li>
+                    Các trang web hoặc ứng dụng của Chúng tôi có thể chứa cookie của bên thứ ba (do các công ty quảng cáo, nhà cung cấp dịch vụ phân tích và các đơn vị khác tạo ra) để họ có thể thu thập thông tin duyệt web trên Thiết bị của Quý khách hàng, bao gồm đánh giá hiệu quả của các chiến dịch quảng cáo mà Chúng tôi triển khai trên trang web của bên thứ ba. Cookie của bên thứ ba tuân theo các chính sách về quyền riêng tư của bên thứ ba đó.
+                </li>
+                <li>
+                    Chúng tôi có thể thêm chức năng chia sẻ nội dung trên trang web hoặc ứng dụng của Chúng tôi với các bên thứ ba hoặc cho bên khác biết Quý khách hàng đã duyệt xem trang web của Chúng tôi. Ví dụ như chức năng “Thích” và “Chia sẻ” do các nền tảng mạng xã hội cung cấp (“Facebook”, “Twitter”, v.v.).
+                </li>
+                <li>
+                    Những mạng xã hội cung cấp các chức năng này có thể xác định được danh tính của Quý khách hàng ngay cả khi Quý khách hàng không dùng những chức năng này trên trang web của Chúng tôi. Trên thực tế, những chức năng này cho phép các nền tảng mạng xã hội theo dõi thông tin hoạt động duyệt web trên trang web của Chúng tôi bất cứ khi nào tài khoản mạng xã hội của Quý khách hàng hoạt động trong lúc Quý khách hàng duyệt xem trang web của Chúng tôi.
+                </li>
+                <li>
+                    Chúng tôi không kiểm soát cách các nền tảng này thu thập dữ liệu cá nhân của Quý khách hàng trong lúc Quý khách hàng duyệt xem trang web của Chúng tôi. Vui lòng sử dụng các liên kết tương ứng để đọc Chính sách về quyền riêng tư của các mạng xã hội này để tìm hiểu cách họ sử dụng thông tin mà họ thu thập (bao gồm cả cho mục đích quảng cáo). Các Chính sách về quyền riêng tư này sẽ cung cấp thông tin về cách quản lý các tùy chọn trên tài khoản mạng xã hội của Quý khách hàng.
+                </li>
+            </ul>
+
+            <h3>Cho phép sử dụng cookie</h3>
+
+            <ul>
+                <li>
+                    Ngoại trừ cookie chức năng hoặc cookie bảo mật, việc sử dụng cookie trên Thiết bị phụ thuộc vào lựa chọn của người dùng. Người dùng có thể tự do đưa ra và thay đổi quyết định này vào bất kỳ thời điểm nào.
+                </li>
+                <li>
+                    Quý khách hàng có thể quản lý cookie trên Thiết bị bằng cách cài đặt để trình duyệt chấp nhận hoặc từ chối mọi cookie hoặc từng cookie. Các chế độ cài đặt có thể thay đổi chức năng duyệt web trên Internet của Quý khách hàng và đôi khi, có thể ảnh hưởng cả khả năng truy cập vào một số dịch vụ cần phải sử dụng cookie.
+                </li>
+                <li>
+                    Trường hợp này cũng xảy ra nếu Chúng tôi hoặc một trong những đối tác kinh doanh của Chúng tôi không nhận ra được loại trình duyệt mà Thiết bị của Quý khách hàng đang sử dụng và không thể xác định được thông tin như ngôn ngữ, chế độ cài đặt màn hình hiển thị hoặc quốc gia/khu vực kết nối Internet. Chúng tôi không chịu trách nhiệm pháp lý trong trường hợp Quý khách hàng chỉ có quyền truy cập tối thiểu vào các dịch vụ của Chúng tôi do trước đó, Quý khách hàng đã xóa hoặc từ chối cookie.
+                </li>
+            </ul>
+
+            <p>
+                Nếu Quý khách hàng dùng chung Thiết bị với người khác và Thiết bị đó sử dụng nhiều loại trình duyệt thì Chúng tôi không thể đảm bảo rằng các dịch vụ và quảng cáo được điều chỉnh để phù hợp với với mục đích sử dụng Thiết bị của cá nhân Quý khách hàng (nếu có) có bị ảnh hưởng từ hoạt động sử dụng của người khác hay không.
+            </p>
+
+            <hr>
+
+            <h2 class="section-heading">5. CHUYỂN GIAO THÔNG TIN CÁ NHÂN CỦA QUÝ KHÁCH HÀNG</h2>
+            
+            <ul>
+                <li>
+                    Thông tin Chúng tôi thu thập về Quý khách hàng có thể được chuyển giao, lưu trữ và xử lý tại các quốc gia/khu vực có pháp nhân của V & Đ, để đảm bảo phục vụ Quý khách hàng tốt hơn khi Quý khách hàng ghé thăm Chúng tôi và phục vụ các mục đích nêu trong Chính sách này. Chúng tôi cũng có thể chuyển giao thông tin cá nhân của Quý khách hàng cho các nhà cung cấp dịch vụ liên quan đến việc bảo trì các trang web, ứng dụng hoặc mạng xã hội của Chúng tôi, hoặc bất kỳ công cụ nào khác dùng để xử lý thông tin của khách hàng hoặc khách hàng tiềm năng của Chúng tôi.
+                </li>
+                <li>
+                    Khi Chúng tôi chuyển giao thông tin của Quý khách hàng, Chúng tôi sẽ đưa ra các tiêu chuẩn bảo vệ thông tin cá nhân của Quý khách hàng. Các tiêu chuẩn này tối thiểu sẽ tương đương với tiêu chuẩn do luật hiện hành quy định. Điều này có thể bao gồm việc ký kết các thỏa thuận về việc chuyển giao dữ liệu hoặc bất kỳ bằng chứng hợp lệ nào khác về việc chuyển giao dữ liệu theo luật hiện hành.
+                </li>
+                <li>
+                    Chúng tôi sẽ gửi danh sách các quốc gia/khu vực thứ ba có liên quan và bản sao của các biện pháp bảo vệ này khi Quý khách hàng yêu cầu.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="section-heading">6. THỜI HẠN LƯU TRỮ DỮ LIỆU</h2>
+            
+            <ul>
+                <li>
+                    Thông tin cá nhân của Quý khách hàng sẽ không được lưu trữ ở dạng thức cho phép các trang web xác định danh tính trong khoảng thời gian lâu hơn mức mà V & Đ, theo kết luận thỏa đáng Chúng tôi, cho là cần thiết để đạt được những mục đích của quá trình thu thập hoặc xử lý thông tin đó, hoặc lâu hơn mức quy định theo pháp luật hiện hành, liên quan đến thời hạn lưu trữ dữ liệu.
+                </li>
+                <li>
+                    Chúng tôi sẽ ngừng lưu trữ dữ liệu cá nhân của Quý khách hàng hoặc xóa các phương tiện liên kết dữ liệu với bạn ngay khi Chúng tôi có lý do hợp lý để tin rằng việc lưu trữ dữ liệu không còn phục vụ cho mục đích của quá trình thu thập dữ liệu cá nhân và không còn cần thiết cho mục đích pháp lý hay kinh doanh nữa.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="section-heading">7. QUYỀN CỦA QUÝ KHÁCH HÀNG</h2>
+            
+            <ul>
+                <li>
+                    Quý khách hàng có thể yêu cầu truy cập vào thông tin cá nhân mà Chúng tôi lưu trữ, hoặc thông tin về cách thức Chúng tôi sử dụng hoặc tiết lộ thông tin cá nhân của Quý khách hàng ("yêu cầu truy cập"). Khi Quý khách hàng đưa ra yêu cầu truy cập này, Chúng tôi sẽ cung cấp cho Quý khách hàng tất cả thông tin theo yêu cầu của pháp luật. Chúng tôi có thể tính một khoản phí hợp lý cho mỗi yêu cầu truy cập. Trong trường hợp đó, Chúng tôi sẽ thông báo chi phí trước khi xử lý yêu cầu của Quý khách hàng.
+                </li>
+                <li>
+                    Quý khách hàng cũng có thể yêu cầu Chúng tôi chỉnh sửa, điều chỉnh, xóa bỏ bất kỳ thông tin cá nhân của Quý khách hàng mà Chúng tôi có, cũng như thông tin không đầy đủ, chưa được cập nhật hoặc không chính xác ("yêu cầu sửa đổi"). Quý khách hàng cũng có thể yêu cầu Chúng tôi giới hạn quyền truy cập, ngừng tiết lộ, chuyển giao, cấp quyền truy cập hoặc xóa thông tin cá nhân của Quý khách hàng. Quý khách hàng cũng có quyền khiếu nại lên cơ quan giám sát có thẩm quyền.
+                </li>
+                <li>
+                    Liên hệ với Chuyên viên bảo vệ dữ liệu của Chúng tôi theo địa chỉ <strong>vietnam@contact.vandd.com</strong>.
+                </li>
+                <li>
+                    Khi Chúng tôi sử dụng, thu thập, tiết lộ và/hoặc xử lý thông tin cá nhân theo sự chấp thuận của Quý khách hàng (ví dụ: khi Quý khách hàng chấp thuận nhận thông tin cập nhật từ Chúng tôi), Quý khách hàng có thể gửi email tới <strong>vietnam@contact.vandd.com</strong> để thu hồi mọi quyết định đồng ý đã cấp cho Chúng tôi. Việc rút lại quyết định đồng ý không ảnh hưởng đến tính hợp pháp của quá trình xử lý thông tin cá nhân theo sự đồng ý của Quý khách hàng trước thời điểm rút lại, cũng như không ảnh hưởng đến quyền của Chúng tôi trong việc tiếp tục thu thập, sử dụng và tiết lộ dữ liệu cá nhân trong trường hợp pháp luật hiện hành cho phép hoặc yêu cầu thu thập, sử dụng và tiết lộ dữ liệu cá liệu mà không có sự đồng ý đó.
+                </li>
+                <li>
+                    Chúng tôi tôn trọng quyết định rút lại sự đồng ý của Quý khách hàng, nhưng xin lưu ý rằng tùy vào bản chất và phạm vi yêu cầu, Chúng tôi có thể không tiếp tục cung cấp hàng hóa hoặc dịch vụ của Chúng tôi cho Quý khách hàng. Trong trường hợp đó, Chúng tôi sẽ thông báo cho Quý khách hàng trước khi hoàn tất quy trình xử lý yêu cầu ấy.
+                </li>
+                <li>
+                    Để gửi yêu cầu truy cập và/hoặc yêu cầu sửa đổi, vui lòng liên hệ với Chúng tôi theo địa chỉ <strong>vietnam@contact.vandd.com</strong>, Chúng tôi sẽ cố gắng phản hồi yêu cầu của Quý khách hàng trong thời gian sớm nhất có thể. Thông thường, Quý khách hàng sẽ nhận được phản hồi của Chúng tôi sẽ trong vòng mười (10) ngày làm việc. Nếu Chúng tôi không thể phản hồi yêu cầu trong vòng ba mươi (30) ngày sau khi nhận được yêu cầu đó, thì Chúng tôi sẽ thông báo cho Quý khách hàng bằng văn bản trong vòng ba mươi (30) ngày, kể từ thời điểm mà Chúng tôi có thể phản hồi yêu cầu của Quý khách hàng. Chúng tôi có thể từ chối yêu cầu thực hiện các quyền này khi pháp luật hiện hành cho phép hoặc yêu cầu Chúng tôi phải làm như vậy.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="section-heading">8. BẢO VỆ THÔNG TIN CÁ NHÂN CỦA QUÝ KHÁCH HÀNG</h2>
+            
+            <ul>
+                <li>
+                    Chúng tôi sẽ cung cấp mức độ bảo vệ thích hợp đối với dữ liệu cá nhân và đảm bảo áp dụng các biện pháp bảo mật phù hợp về mặt kỹ thuật lẫn tổ chức (trong đó, bao gồm việc tập huấn và đào tạo nhân viên có liên quan) để bảo vệ thông tin cá nhân, không để dữ liệu bị phá hủy một cách ngẫu nhiên hay trái phép, bị mất hoặc sửa đổi một cách ngẫu nhiên, bị tiết lộ hoặc truy cập trái phép, cũng như mọi hình thức can thiệp bất hợp pháp khác.
+                </li>
+                <li>
+                    Tuy nhiên, không phương thức truyền dữ liệu nào đảm bảo an toàn tuyệt đối qua Internet. Do đó, Chúng tôi không thể đảm bảo tính bảo mật của mọi thông tin cá nhân của Quý khách hàng được lưu trữ hoặc gửi đến cho Chúng tôi. Chúng tôi khuyến khích Quý khách hàng nên thận trọng khi sử dụng Internet để truy cập các trang web, ứng dụng hoặc mạng xã hội của Chúng tôi.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="section-heading">9. TRẺ EM</h2>
+            
+            <ul>
+                <li>
+                    Các trang web và ứng dụng của Chúng tôi không hướng đến đối tượng là trẻ em. Chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em khi không được sự cho phép của cha/mẹ hoặc người giám hộ, trừ trường hợp pháp luật hiện hành cho phép.
+                </li>
+                <li>
+                    Quý khách hàng phải đủ 18 tuổi trở lên khi cung cấp thông tin cá nhân cho Chúng tôi, cũng như khi thực hiện giao dịch tại cửa hàng, trên trang web hoặc ứng dụng của Chúng tôi. Khi thực hiện giao dịch với Chúng tôi, Quý khách hàng xác nhận rằng Quý khách hàng đủ 18 tuổi trở lên và có đầy đủ khả năng để thực hiện giao dịch, cũng như bị ràng buộc về mặt pháp lý với các giao dịch đó.
+                </li>
+                <li>
+                    Nếu Chúng tôi nhận được thông báo bằng văn bản qua phương thức nêu tại phần "Liên hệ với Chúng tôi" bên dưới hoặc biết rằng có trẻ vị thành niên dưới 18 tuổi đã gửi dữ liệu cá nhân cho Chúng tôi thông qua các nền tảng truyền thông của Chúng tôi hoặc qua một phương thức khác, Chúng tôi sẽ xóa thông tin cá nhân đó.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="section-heading">10. CÁC TRANG WEB CỦA BÊN THỨ BA</h2>
+            
+            <p>
+                Chúng tôi có thể liên kết đến các trang web hoặc dịch vụ của bên thứ ba mà Chúng tôi không kiểm soát và được điều chỉnh bởi chính sách về quyền riêng tư của chính bên thứ ba đó. Chính sách này không áp dụng cho các trang web của bên thứ ba đó. Chúng tôi khuyến khích Quý khách hàng rà soát chính sách về quyền riêng tư đối với tất cả các trang web của bên thứ ba mà Quý khách hàng truy cập, để tìm hiểu cách họ xử lý thông tin cá nhân của Quý khách hàng.
+            </p>
+
+            <hr>
+
+            <h2 class="section-heading">11. CÁC THAY ĐỔI ĐỐI VỚI CHÍNH SÁCH NÀY</h2>
+            
+            <ul>
+                <li>
+                    Chính sách của Chúng tôi có thể thay đổi theo thời gian để phản ánh những thay đổi trong quy trình Chúng tôi xử lý thông tin cá nhân của Quý khách hàng. Chúng tôi sẽ thông báo cho Quý khách hàng về mọi thay đổi quan trọng theo yêu cầu của pháp luật. Chúng tôi sẽ đăng một bản cập nhật trên trang web của Chúng tôi.
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2 class="section-heading">12. LIÊN HỆ VỚI CHÚNG TÔI</h2>
+            
+            <ul>
+                <li>
+                    Nếu có bất kỳ câu hỏi nào liên quan đến việc bảo vệ thông tin cá nhân của Quý khách hàng, vui lòng liên hệ với Chuyên viên bảo vệ dữ liệu của Chúng tôi qua email <strong>vietnam@contact.vandd.com</strong>.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-columns">
+        <!-- Cột 1 -->
+        <div class="col-12 col-md-6 col-xl-3 footer-col">
+          <h4>HỖ TRỢ</h4>
+          <p>
+            Quý khách có thể liên hệ với chúng tôi qua<br />
+            <a href="#">Hotline +84 819090061</a>,
+            <a href="https://zalo.me">Zalo</a>,
+            <a href="mailto:vidat112296@gmail.com">Email</a>, hoặc
+            <a href="mailto:vidat112296@gmail.com">các phương thức liên hệ khác</a>.
+          </p>
+          <ul>
+            <li><a href="dichvu.html#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+            <li><a href="dichvu.html#cham-soc-san-pham">Chăm sóc sản phẩm</a></li>
+            <li><a href="lienhe.html#cuahang">Cửa hàng</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="col-12 col-md-6 col-xl-3 footer-col">
+          <h4>DỊCH VỤ</h4>
+          <ul>
+          <li><a href="dichvu.html#bao-hanh">Dịch vụ bảo hành</a></li>
+          <li><a href="dichvu.html#doi-tra">Dịch vụ đổi trả</a></li>
+          <li><a href="dichvu.html#chinh-sach-van-chuyen">Chính sách vận chuyển</a></li>
+          <li><a href="dichvu.html#phuong-thuc-thanh-toan">Phương thức thanh toán</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="col-12 col-md-6 col-xl-3 footer-col">
+          <h4>VỀ V & Đ</h4>
+          <ul>
+            <li><a href="gioithieu.html">Thông tin</a></li>
+            <li><a href="gioithieu.html#giatri">Giá trị</a></li>
+            <li><a href="gioithieu.html#phattrien">Phát triển bền vững</a></li>
+            <li><a href="lienhe.html#cuahang">Cửa hàng</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 4 -->
+        <div class="col-12 col-md-6 col-xl-3 footer-col">
+          <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+          <p>
+            <a href="form.html">Đăng ký</a> nhận thư điện tử để cập nhật những tin tức
+            mới nhất từ V & Đ, bao gồm các buổi ra mắt độc quyền trực tuyến và
+            bộ sưu tập mới.
+          </p>
+          <ul>
+            <li><a href="lienhe.html#lh">Theo dõi chúng tôi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div class="left">
+          <img src="image/vn.png" alt="Việt Nam" style="height: 14px; vertical-align: middle; margin-right: 5px" />
+          <a href="wed.html">Việt Nam</a>
+        </div>
+        <div class="center">
+          <strong>V & Đ</strong>
+        </div>
+        <div class="right">
+          <a href="pl.html">Chính sách | Pháp lý & Quyền riêng tư</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="js.js"></script>
+
+</body>
+</html>
