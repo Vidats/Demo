@@ -419,6 +419,60 @@ body {
   opacity: 1; /* Khi có class "show", hiển thị lớp phủ (trong suốt 100%) */
   visibility: visible; /* Cho phép hiển thị */
 }
+/* === RESPONSIVE CHO TABLET (IPAD) === */
+@media (max-width: 1024px) {
+  .sliding-menu {
+    width: 300px; /* Giảm chiều rộng để vừa với iPad */
+  }
+
+  .menu-header h3 {
+    font-size: 18px;
+  }
+
+  .category-title {
+    font-size: 20px;
+  }
+
+  .submenu a {
+    font-size: 14px;
+  }
+}
+
+/* === RESPONSIVE CHO MOBILE === */
+@media (max-width: 768px) {
+  /* Chiếm toàn màn hình khi mở menu */
+  .sliding-menu {
+    width: 100%;
+    max-width: 280px; /* Giới hạn để không chiếm toàn bộ chiều ngang */
+  }
+
+  .menu-header {
+    padding: 15px;
+  }
+
+  .menu-header h3 {
+    font-size: 16px;
+  }
+
+  .category-title {
+    font-size: 18px;
+  }
+
+  .submenu a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* Đảm bảo overlay làm mờ toàn màn hình */
+  .menu-overlay {
+    backdrop-filter: blur(4px);
+  }
+
+  /* Khi menu mở, phần thân website không cuộn */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
 
 
 /* ==== NAVBAR CHÍNH ==== */
