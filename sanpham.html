@@ -199,29 +199,39 @@ body {
         </ul>
     </div>
 </div>
-
-<!-- navbar -->
-<nav class="navbar bg-light border-bottom">
+ <!-- navbar -->
+ <nav class="navbar navbar-expand-lg bg-light border-bottom">
   <div class="container">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="wed.html">Trang Chủ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active " href="sanpham.html">Sản Phẩm </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="dichvu.html">Dịch Vụ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
-      </li>
-    </ul>
+    
+ <!-- Nút toggle navbar -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Danh sách menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link " href="wed.html">Trang Chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="sanpham.html">Sản Phẩm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dichvu.html">Dịch Vụ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+
 
 
 <div class="search-page container">
@@ -330,6 +340,7 @@ body {
     </div>
   </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 function toggleMenu() {
